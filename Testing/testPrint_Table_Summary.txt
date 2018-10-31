@@ -1,0 +1,58 @@
+Occurances, Table Name                            
+         1, Format Time Tag                       
+         1, General Administrative Reference      
+         1, Mission Security                      
+         1, Air Tasking Order                     
+         1, Collection Platform Identification    
+         1, Requester                             
+         1, Requester Remarks                     
+         1, General Target Information            
+         1, General Target Location               
+         1, General Target EEI                    
+         1, General Target Remarks                
+         1, Minimum Dynamic Platform              
+         1, Comprehensive Dynamic Platform        
+         1, Sensor Grouping                       
+         1, End of Record Marker                  
+         1, End of Segment Marker                 
+         1, Event Marker                          
+         1, Segment Index                         
+         1, Event Index                           
+         1, User Defined                          
+         1, Sensor Identification                 
+         1, PASSIVE Sensor Description            
+         1, Sensor Calibration                    
+         1, Sync Hierarchy and Image Build        
+         1, Sensor Data Timing                    
+         1, Sensor Operating Status               
+         1, Sensor Position                       
+         1, Minimum Sensor Attitude               
+         1, Comprehensive Sensor Attitude         
+         1, Gimbals Position Data Table           
+         1, Minimum Gimbals Attitude              
+         1, Comprehensive Gimbals Attitude        
+         1, Sensor Index                          
+         1, Passive Sensor Element                
+         1, Sensor Sample Coordinate Description  
+         1, Sensor Sample Timing Description      
+         1, Sensor Compression                    
+         1, JPEG Sensor Quantisation              
+         1, JPEG Sensor Huffman                   
+         1, RADAR Sensor Description              
+         1, RADAR Collection Plane Image Geometry 
+         1, Reference Track                       
+         1, Rectified Image Geometry              
+         1, Virtual Sensor Definition             
+         1, RADAR Parameters                      
+         1, ISAR Track                            
+         1, RADAR Element                         
+         1, Sensor                                
+         1, Sensor Sample "x" Coordinate          
+         1, Sensor Sample "y" Coordinate          
+         1, Sensor Sample "z" Coordinate          
+         1, Sensor Sample Timing                  
+         1, 4607 GMTI                             
+         1, 4609 Motion Imagery                   
+         1, Range Finder                          
+         1, JPEG 2000 Description                 
+         1, JPEG 2000 Index                       

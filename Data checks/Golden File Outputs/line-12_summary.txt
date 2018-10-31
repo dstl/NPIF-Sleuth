@@ -1,0 +1,82 @@
+File : Y:\User Data\Steve\Documents\work\7023 golden files2\line-12.7023
+File looks like it is Edition:, 3 (from 1st packet)
+4, Segments in the File
+Segments are numbered:, 0, 1, 2, 3
+The File contains, 52587, Packets
+Postambles appear to follow each data segment.
+The File contains data on 1 sensors:
+
+The Tables in the file are (not in order):
+Occurances, Table Name                            
+         3, Format Time Tag                       
+         3, General Administrative Reference      
+     51262, Sensor                                
+         3, Sensor Compression                    
+         3, JPEG Sensor Quantisation              
+         3, JPEG Sensor Huffman                   
+      1281, Minimum Dynamic Platform              
+         3, Passive Sensor Element                
+         1, End of Record Marker                  
+         3, End of Segment Marker                 
+         3, Segment Index                         
+         3, Sensor Identification                 
+         7, PASSIVE Sensor Description            
+         3, Sync Hierarchy and Image Build        
+         3, Sensor Index                          
+         3, Minimum Sensor Attitude               
+
+The Tables in each segment are (not in order):
+
+Segment, 0
+Occurances, Table Name                            
+         1, End of Segment Marker                 
+         1, Format Time Tag                       
+         1, General Administrative Reference      
+         1, Sensor Identification                 
+         1, PASSIVE Sensor Description            
+         1, JPEG Sensor Huffman                   
+         1, Sync Hierarchy and Image Build        
+         1, JPEG Sensor Quantisation              
+         1, Minimum Sensor Attitude               
+         1, Passive Sensor Element                
+         1, Sensor Compression                    
+
+Segment, 1
+Occurances, Table Name                            
+         1, Format Time Tag                       
+         1, General Administrative Reference      
+         1, Sensor Compression                    
+         1, JPEG Sensor Quantisation              
+         1, JPEG Sensor Huffman                   
+       781, Minimum Dynamic Platform              
+         1, Passive Sensor Element                
+     37012, Sensor                                
+         1, Segment Index                         
+         1, Sensor Identification                 
+         3, PASSIVE Sensor Description            
+         1, Sync Hierarchy and Image Build        
+         1, Sensor Index                          
+         1, Minimum Sensor Attitude               
+         1, End of Segment Marker                 
+
+Segment, 2
+Occurances, Table Name                            
+         1, Format Time Tag                       
+         1, General Administrative Reference      
+         1, Sensor Compression                    
+         1, JPEG Sensor Quantisation              
+         1, JPEG Sensor Huffman                   
+       500, Minimum Dynamic Platform              
+         1, Passive Sensor Element                
+     14250, Sensor                                
+         2, Segment Index                         
+         1, Sensor Identification                 
+         3, PASSIVE Sensor Description            
+         1, Sync Hierarchy and Image Build        
+         2, Sensor Index                          
+         1, Minimum Sensor Attitude               
+         1, End of Segment Marker                 
+
+Segment, 3
+Occurances, Table Name                            
+         1, End of Record Marker                  

@@ -1,0 +1,432 @@
+######################################################
+Checking for any errors in Header CRC values ...
+ ... All OK.
+######################################################
+Checking for packet headers that are too short ...
+ ... All OK.
+######################################################
+Checking for packets with invalid Edition numbers ...
+ ... All OK.
+######################################################
+Checking for any errors in Enumeration values ...
+ ... All OK.
+######################################################
+Checking if reserved header fields are empty ...
+ ... All OK.
+######################################################
+Checking for unrecognised Source Addresses ...
+ ... All OK.
+######################################################
+Checking for unrecognised Data File Addresses ...
+ ... All OK.
+######################################################
+Checking for any unidentified tables ...
+ ... All OK.
+######################################################
+Checking for data packet lengths outsize expected ranges ...
+ ... All OK.
+######################################################
+Checking for filler bytes after packets ...
+ ... All OK.
+######################################################
+Checking for errors with values derived from Source or Data File addresses ...
+ ... All OK.
+######################################################
+Checking for any User Defined Tables ...
+ ... All OK.
+######################################################
+Checking for any errors in Data CRC values ...
+ ... All OK.
+######################################################
+Checking for any errors in DTG values ...
+ ... All OK.
+######################################################
+Checking for any invalid ASCII in ASCII data ...
+ ... All OK.
+######################################################
+Checking for any out of range angles ...
+ ... All OK.
+######################################################
+Checking that conditional fields are correctly used ...
+ ... All OK.
+######################################################
+Checking for NULL values in Mandatory Fields ...
+ERROR:   , Packet 624(Segment Index) - Mandatory Field has NULL value, field: Aircraft location at the start of recording of the segment
+1 Errors and 0 Warnings noted.
+######################################################
+Checking for invalid data in any jpeg tables ...
+ ... All OK.
+######################################################
+Checking for errors opening files ...
+ ... All OK.
+######################################################
+Checking if the file looks like STANAG 7023 ...
+ ... All OK.
+######################################################
+Checking for errors in numbers of segments ...
+ ... All OK.
+######################################################
+Checking for errors in the ordering of segments ...
+ ... All OK.
+######################################################
+Checking that End of Segment tables exist at segment changes ...
+ ... All OK.
+######################################################
+Checking that End of Record tables exist in correct places and have correct segment number and claimed size ...
+ ... All OK.
+######################################################
+Checking that End of Segment tables have the correct sizes in them ...
+ ... All OK.
+######################################################
+Checking for correct use of compression flag ...
+ERROR:   , Sensor Data in packet 13 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 15 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 17 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 19 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 21 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 23 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 25 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 27 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 29 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 31 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 33 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 35 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 37 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 39 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 41 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 43 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 45 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 47 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 49 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 51 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 53 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 55 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 57 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 59 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 61 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 63 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 65 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 67 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 69 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 71 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 73 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 75 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 77 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 79 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 81 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 83 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 85 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 87 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 89 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 91 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 93 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 95 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 97 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 99 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 101 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 103 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 105 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 107 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 109 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 111 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 113 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 115 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 117 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 119 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 121 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 123 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 125 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 127 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 129 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 131 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 133 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 135 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 137 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 139 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 141 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 143 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 145 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 147 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 149 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 151 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 153 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 155 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 157 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 159 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 161 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 163 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 165 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 167 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 169 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 171 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 173 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 175 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 177 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 179 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 181 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 183 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 185 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 187 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 189 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 191 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 193 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 195 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 197 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 199 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 201 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 203 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 205 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 207 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 209 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 211 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 213 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 215 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 217 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 219 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 221 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 223 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 225 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 227 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 229 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 231 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 233 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 235 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 237 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 239 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 241 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 243 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 245 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 247 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 249 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 251 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 253 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 255 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 257 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 259 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 261 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 263 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 265 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 267 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 269 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 271 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 273 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 275 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 277 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 279 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 281 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 283 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 285 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 287 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 289 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 291 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 293 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 295 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 297 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 299 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 301 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 303 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 305 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 307 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 309 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 311 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 313 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 315 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 317 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 319 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 321 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 323 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 325 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 327 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 329 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 331 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 333 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 335 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 337 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 339 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 341 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 343 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 345 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 347 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 349 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 351 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 353 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 355 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 357 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 359 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 361 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 363 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 365 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 367 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 369 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 371 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 373 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 375 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 377 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 379 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 381 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 383 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 385 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 387 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 389 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 391 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 393 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 395 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 397 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 399 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 401 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 403 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 405 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 407 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 409 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 411 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 413 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 415 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 417 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 419 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 421 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 423 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 425 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 427 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 429 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 431 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 433 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 435 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 437 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 439 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 441 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 443 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 445 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 447 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 449 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 451 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 453 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 455 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 457 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 459 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 461 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 463 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 465 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 467 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 469 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 471 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 473 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 475 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 477 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 479 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 481 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 483 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 485 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 487 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 489 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 491 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 493 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 495 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 497 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 499 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 501 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 503 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 505 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 507 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 509 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 511 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 513 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 515 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 517 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 519 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 521 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 523 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 525 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 527 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 529 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 531 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 533 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 535 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 537 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 539 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 541 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 543 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 545 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 547 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 549 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 551 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 553 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 555 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 557 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 559 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 561 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 563 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 565 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 567 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 569 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 571 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 573 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 575 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 577 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 579 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 581 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 583 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 585 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 587 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 589 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 591 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 593 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 595 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 597 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 599 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 601 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 603 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 605 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 607 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 609 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+ERROR:   , Sensor Data in packet 611 expected to be compressed (JPEG (ISO/IEC 10918-1:1994)), but compression flag not set
+300 Errors and 0 Warnings noted.
+######################################################
+Checking for any filler bytes at front of file ...
+ ... All OK.
+######################################################
+Checking data file numbers are correct ...
+ ... All OK.
+######################################################
+Checking that preamble looks OK ...
+ERROR:   , Packet 10(End of Segment Marker) End of Segment Tables should not be part of the Preamble
+1 Errors and 0 Warnings noted.
+######################################################
+Checking that index tables exist in postambles ...
+ ... All OK.
+######################################################
+Checking that Postambles are set up correctly ...
+ERROR:   , Postamble for Segment 1 contains packet (num= 626, End of Segment Marker) which is neither an index table nor a repeat of a preamble table
+1 Errors and 0 Warnings noted.
+######################################################
+Checking for errors in any sensor groupings ...
+ ... All OK.
+######################################################
+Checking for errors in any optional coordinate fields ...
+ ... All OK.
+######################################################
+Checking for errors within any Segment Index tables ...
+ ... All OK.
+######################################################
+Checking for errors within any Event Index tables ...
+ ... All OK.
+######################################################
+Checking for errors associated with sensor numbers ...
+ ... All OK.
+######################################################
+Checking for existance of appropriate Format Time Tag Tables ...
+ ... All OK.
+######################################################
+Checking for errors with Dynamic Platform tables ...
+ ... All OK.
+######################################################
+Checking for errors with Sensor Attitude tables ...
+ ... All OK.
+######################################################
+Checking for errors with Gimbal Attitude tables ...
+ ... All OK.
+######################################################
+Checking for values flagged as suspicious ...
+ ... All OK.
+######################################################
+Checking for any unknown errors ...
+ ... All OK.

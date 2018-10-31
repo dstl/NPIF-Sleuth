@@ -1,0 +1,100 @@
+File : Y:\User Data\Steve\Documents\work\7023 golden files2\line-8.7023
+File looks like it is Edition:, 3 (from 1st packet)
+3, Segments in the File
+Segments are numbered:, 0, 1, 2
+The File contains, 15849, Packets
+Postambles appear to follow each data segment.
+The File contains data on 1 sensors:
+
+The Tables in the file are (not in order):
+Occurances, Table Name                            
+         2, Format Time Tag                       
+         2, General Administrative Reference      
+         2, Mission Security                      
+         2, Air Tasking Order                     
+         2, Collection Platform Identification    
+         4, Requester                             
+         4, Requester Remarks                     
+         4, General Target Information            
+         6, General Target Location               
+         6, General Target EEI                    
+         6, General Target Remarks                
+       781, Minimum Dynamic Platform              
+         1, End of Record Marker                  
+         2, End of Segment Marker                 
+         1, Segment Index                         
+         2, Sensor Identification                 
+         4, PASSIVE Sensor Description            
+         2, Sensor Calibration                    
+         2, Sync Hierarchy and Image Build        
+         2, Sensor Data Timing                    
+         2, Sensor Operating Status               
+         2, Sensor Position                       
+         2, Minimum Sensor Attitude               
+         1, Sensor Index                          
+         2, Passive Sensor Element                
+         2, JPEG Sensor Quantisation              
+         2, JPEG Sensor Huffman                   
+     14999, Sensor                                
+
+The Tables in each segment are (not in order):
+
+Segment, 0
+Occurances, Table Name                            
+         1, Format Time Tag                       
+         1, General Administrative Reference      
+         1, Mission Security                      
+         1, Air Tasking Order                     
+         1, Collection Platform Identification    
+         2, Requester                             
+         2, Requester Remarks                     
+         2, General Target Information            
+         3, General Target Location               
+         3, General Target EEI                    
+         3, General Target Remarks                
+         1, End of Segment Marker                 
+         1, Sensor Identification                 
+         1, PASSIVE Sensor Description            
+         1, Sensor Calibration                    
+         1, Sync Hierarchy and Image Build        
+         1, Sensor Data Timing                    
+         1, Sensor Operating Status               
+         1, Sensor Position                       
+         1, Minimum Sensor Attitude               
+         1, Passive Sensor Element                
+         1, JPEG Sensor Quantisation              
+         1, JPEG Sensor Huffman                   
+
+Segment, 1
+Occurances, Table Name                            
+         1, Format Time Tag                       
+         1, General Administrative Reference      
+         1, Mission Security                      
+         1, Air Tasking Order                     
+         1, Collection Platform Identification    
+         2, Requester                             
+         2, Requester Remarks                     
+         2, General Target Information            
+         3, General Target Location               
+         3, General Target EEI                    
+         3, General Target Remarks                
+       781, Minimum Dynamic Platform              
+         1, End of Segment Marker                 
+         1, Segment Index                         
+         1, Sensor Identification                 
+         3, PASSIVE Sensor Description            
+         1, Sensor Calibration                    
+         1, Sync Hierarchy and Image Build        
+         1, Sensor Data Timing                    
+         1, Sensor Operating Status               
+         1, Sensor Position                       
+         1, Minimum Sensor Attitude               
+         1, Sensor Index                          
+         1, Passive Sensor Element                
+         1, JPEG Sensor Quantisation              
+         1, JPEG Sensor Huffman                   
+     14999, Sensor                                
+
+Segment, 2
+Occurances, Table Name                            
+         1, End of Record Marker                  

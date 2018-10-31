@@ -1,0 +1,525 @@
+Overview of all tables:
+For flags data (F1; F2; F3) order is: Compression; CRC; Pre/Postamble ('1' indicates on; '0' indicates off)
+DFA is Data File Address as an integer
+Count,Source,Table,SA,DFA,F1,F2,F3,Size,Segment,Number,Time Tag,Sync Type,Edition
+0,Platform,Comprehensive Dynamic Platform,32,1,0,0,0,231,1,0,1,INACTIVE,3
+--,Platform ID Number:,0
+--,Platform Time:,2003-03-27, 10:16:00.020000,FULL SPECIFICATION
+--,Platform Geo-Location:,51.0000036610912,1.4392463055206753e-05,DE-RATED
+--,MSL Altitude:,<NULL>,FAIL
+--,AGL Altitude:,1000.0,FULL SPECIFICATION
+--,GPS Altitude:,<NULL>,FAIL
+--,Platform true airspeed:,60.0,FULL SPECIFICATION
+--,Platform ground speed:,<NULL>,FAIL
+--,Platform true Course:,57.35860971249908,FULL SPECIFICATION
+--,Platform true Heading:,57.29577951308232,FULL SPECIFICATION
+--,Platform Pitch:,0.0,FULL SPECIFICATION
+--,Platform Roll:,0.0,FULL SPECIFICATION
+--,Platform Yaw:,0.06283019941676306,FULL SPECIFICATION
+--,Platform Velocity North:,32.362753757099256,DE-RATED
+--,Platform Velocity East:,50.52377825595942,DE-RATED
+--,Platform Velocity Down:,-0.0,DE-RATED
+--,Platform Acceleration North:,-2.7692297494564144,DE-RATED
+--,Platform Acceleration East:,1.775958374281572,DE-RATED
+--,Platform Acceleration Down:,0.0,DE-RATED
+--,Platform Heading Rate:,0.0,FULL SPECIFICATION
+--,Platform Pitch Rate:,0.0,FULL SPECIFICATION
+--,Platform Roll Rate:,0.0,FULL SPECIFICATION
+--,Platform Yaw Rate:,3.1415099708381526,FULL SPECIFICATION
+--,Platform Heading angular Acceleration:,0.0,FULL SPECIFICATION
+--,Platform Pitch angular Acceleration:,0.0,FULL SPECIFICATION
+--,Platform Roll angular Acceleration:,0.0,FULL SPECIFICATION
+--,Platform Yaw angular Acceleration:,157.07549854190762,FULL SPECIFICATION
+--,V/H:,0.06,DE-RATED
+1,Sensor Parametric,Minimum Gimbals Attitude,67,96,0,0,0,24,1,2,2,INACTIVE,3
+--,Sensor ID Number:,3
+--,Gimbal ID Number:,0
+--,Rotation about Z-axis:,0.0
+--,Rotation about Y-axis:,-28.64788975654116
+--,Rotation about X-axis:,0.0
+2,Sensor Parametric,Sensor Compression,64,256,0,0,1,1,0,4,0,INACTIVE,3
+--,Sensor ID Number:,0
+--,Compression algorithm:,JPEG (ISO/IEC 10918-1:1994)
+3,Segment/Event Index,Event Marker,48,2,0,0,0,6,1,0,500,INACTIVE,3
+--,Event Number:,1
+--,Event Type:,Manual Point Event/Target
+--,Primary Sensor Number:,2
+--,Secondary Sensor Number:,4
+--,Third Sensor Number:,6
+--,Target number:,0
+4,Segment/Event Index,Event Index,48,257,0,0,1,78,1,2,1013,INACTIVE,3
+--,Segment ID Number:,1
+--,Event ID Number:,1
+--,Event Type:,Manual Point Event/Target
+--,Target Number:,0
+--,Target Sub-section:,0
+--,Time Tag:,496
+--,Event Time:,2003-06-16, 15:44:00.920000
+--,Aircraft Geo-Location:,54.30312394615454,-2.2995546826400632
+--,Primary Sensor Number:,2
+--,Secondary Sensor Number:,4
+--,Third Sensor Number:,6
+--,Event position in the record:,23696750
+--,Event Name:,<NULL>
+5,Platform,Sensor Grouping,32,4260027,0,0,0,6,2,238,305419896,INACTIVE,4
+--,Group ID Number:,187
+--,Group type:,Coverage
+--,Number of sensor numbers within the Group:,2
+--,Coverage relationship:,Abutted
+--,Timing relationship:,Simultaneous
+--,Number of Sensors listed in table,2
+--,Sensor number:,[0],5
+--,Sensor number:,[1],9
+6,User Defined,User Defined,63,187,0,0,0,15,2,238,305419896,INACTIVE,4
+ --,Content of User Defined Table cannot be printed
+7,Sensor Parametric,Comprehensive Sensor Attitude,80,48,0,0,0,72,2,238,305419896,INACTIVE,4
+--,Sensor ID Number:,16
+--,Rotation about Z-axis:,57.29577951308232
+--,Rotation about Y-axis:,57.29577951308232
+--,Rotation about X-axis:,57.29577951308232
+--,Rotation rate about Z-axis:,114.59155902616465
+--,Rotation rate about Y-axis:,171.88733853924697
+--,Rotation rate about X-axis:,229.1831180523293
+--,Rotation acceleration about Z-axis:,286.4788975654116
+--,Rotation acceleration about Y-axis:,343.77467707849394
+--,Rotation acceleration about X-axis:,401.07045659157626
+8,Sensor Parametric,Gimbals Position Data Table,80,83,0,0,0,24,2,238,305419896,INACTIVE,4
+--,Sensor ID Number:,16
+--,Gimbal ID Number:,3
+--,X vector component:,11.0
+--,Y vector component:,12.0
+--,Z vector component:,13.0
+9,Sensor Parametric,Comprehensive Gimbals Attitude,80,114,0,0,0,72,2,238,305419896,INACTIVE,4
+--,Sensor ID Number:,16
+--,Gimbal ID Number:,2
+--,Rotation about Z-axis:,57.29577951308232
+--,Rotation about Y-axis:,57.29577951308232
+--,Rotation about X-axis:,57.29577951308232
+--,Rotation rate about Z-axis:,114.59155902616465
+--,Rotation rate about Y-axis:,171.88733853924697
+--,Rotation rate about X-axis:,229.1831180523293
+--,Rotation acceleration about Z-axis:,286.4788975654116
+--,Rotation acceleration about Y-axis:,343.77467707849394
+--,Rotation acceleration about X-axis:,401.07045659157626
+10,Sensor Parametric,Sensor Sample Coordinate Description,80,4112,0,0,0,19,2,238,305419896,INACTIVE,4
+--,Sensor ID Number:,16
+--,Vector model:,Sample by sample
+--,Number of Elements in table,3
+--,Size of 'x' vector component:,[0],12
+--,Type of 'x' vector component:,[0],Unsigned Binary
+--,Size of 'y' vector component:,[0],32
+--,Type of 'y' vector component:,[0],Short Float (IEEE 32-bit definition)
+--,Size of 'z' vector component:,[0],32
+--,Type of 'z' vector component:,[0],Short Float (IEEE 32-bit definition)
+--,Size of 'x' vector component:,[1],12
+--,Type of 'x' vector component:,[1],Unsigned Binary
+--,Size of 'y' vector component:,[1],32
+--,Type of 'y' vector component:,[1],Short Float (IEEE 32-bit definition)
+--,Size of 'z' vector component:,[1],32
+--,Type of 'z' vector component:,[1],Short Float (IEEE 32-bit definition)
+--,Size of 'x' vector component:,[2],12
+--,Type of 'x' vector component:,[2],Unsigned Binary
+--,Size of 'y' vector component:,[2],32
+--,Type of 'y' vector component:,[2],Short Float (IEEE 32-bit definition)
+--,Size of 'z' vector component:,[2],32
+--,Type of 'z' vector component:,[2],Short Float (IEEE 32-bit definition)
+11,Sensor Parametric,Sensor Sample Timing Description,80,4128,0,0,0,7,2,238,305419896,INACTIVE,4
+--,Sensor ID Number:,16
+--,Timing model:,Sample by sample
+--,Timing accuracy:,Real Number
+--,Number of Elements in table,5
+--,Timing method:,[0],CUMULATIVE
+--,Timing method:,[1],CUMULATIVE
+--,Timing method:,[2],CUMULATIVE
+--,Timing method:,[3],CUMULATIVE
+--,Timing method:,[4],CUMULATIVE
+12,Sensor Parametric,RADAR Sensor Description,85,65537,0,0,0,29,2,238,305419896,INACTIVE,4
+--,Sensor ID Number:,21
+--,Image length:,255
+--,Image width:,255
+--,Packets per image:,64
+--,Tile length:,128
+--,Tile width:,128
+--,Physical coordinate system:,Range; Cross Range
+--,Coordinate System Orientation:,vld is Y positive; cvld is X negative
+--,Sensor mode:,ON
+--,Pixel size:,16
+--,Elements per pixel:,8
+--,Data ordering:,4, UNKNOWN EMUMERATION ####****
+--,vld orientation:,Port; i.e. value of alpha is negative
+13,Sensor Parametric,RADAR Collection Plane Image Geometry,85,66304,0,0,0,33,2,238,305419896,INACTIVE,4
+--,Sensor ID Number:,21
+--,Alpha:,85.94366926962348
+--,Virtual distance to the first pixel in the image:,2.5
+--,Pixel interval in the Virtual Look Direction:,3.5
+--,Pixel interval in the Cross Virtual Look Direction:,4.5
+--,Units of measurement for CrossVirtual Look Direction:,distance (metres)
+14,Sensor Parametric,Reference Track,85,66305,0,0,0,72,2,238,305419896,INACTIVE,4
+--,Sensor ID Number:,21
+--,Sensor Virtual Position geo-location:,45.0,45.0
+--,Sensor Virtual Position MSL altitude:,<NULL>
+--,Sensor Virtual Position AGL altitude:,<NULL>
+--,Sensor Virtual Position GPS altitude:,<NULL>
+--,Reference Track north:,1.1
+--,Reference Track east:,2.1
+--,Reference Track down:,3.1
+--,Reference Track Speed:,4.1
+15,Sensor Parametric,Rectified Image Geometry,85,66306,0,0,0,226,2,238,305419896,INACTIVE,4
+--,Sensor ID Number:,21
+--,Axx:,1.1
+--,Axy:,2.1
+--,Ayx:,3.1
+--,Ayy:,4.1
+--,Cx:,5.1
+--,Cy:,6.1
+--,Data 1:,7.1
+--,Data 2:,8.1
+--,Data 3:,9.1
+--,Data 4:,10.1
+--,Data 5:,11.1
+--,Data 6:,<NULL>
+--,Data 7:,<NULL>
+--,Data 8:,<NULL>
+--,Data 9:,<NULL>
+--,Data 10:,<NULL>
+--,Data 11:,<NULL>
+--,Data 12:,<NULL>
+--,Data 13:,<NULL>
+--,Data 14:,<NULL>
+--,Data 15:,<NULL>
+--,Data 16:,<NULL>
+--,Data 17:,<NULL>
+--,Data 18:,<NULL>
+--,Data 19:,<NULL>
+--,Data 20:,<NULL>
+--,Near Range Point Depression angle:,28.64788975654116
+--,Far Range Point Depression angle:,28.64788975654116
+--,Projection type:,Stereographic
+--,Terrain model:,DTED
+16,Sensor Parametric,Virtual Sensor Definition,86,66307,0,0,0,25,2,238,305419896,INACTIVE,4
+--,Sensor ID Number:,22
+--,Transmit phase difference:,0.0
+--,Receive phase difference:,0.0
+--,Transmit antenna 1 Sensor number:,1
+--,Transmit antenna 2 Sensor number:,Not in use
+--,Receive antenna 1 Sensor number:,3
+--,Receive antenna 2 Sensor number:,Not in use
+--,Combination operation:,Addition
+17,Sensor Parametric,RADAR Parameters,85,66308,0,0,0,122,2,238,305419896,INACTIVE,4
+--,Sensor ID Number:,21
+--,Processed resolution in vld:,1.0
+--,Processed resolution in cvld:,1.0
+--,Wavelength:,1.0
+--,Average power:,1.0
+--,Antenna Gain:,1.0
+--,PRF:,1.0
+--,Radiometric scale factor:,1.0
+--,Aperture Time:,1.0
+--,Pulse Compression Ratio:,1.0
+--,Azimuth Beamwidth:,57.29577951308232
+--,Interpulse Transmit Bandwidth:,1.0
+--,Instantaneous Receiver Bandwidth:,1.0
+--,A/D converter sample rate:,1.0
+--,RADAR mode:,Swath
+--,Processed number of looks:,10
+--,Pre-summing in range:,10
+--,Pre-summing in azimuth:,10
+--,Number of A/D converter bits:,64
+--,Interpulse modulation type:,None
+--,Pulse-to-pulse modulation type:,Linear step
+--,Range compression processing algorithm:,Analogue matched filter
+--,Azimuth compression processing algorithm:,Doppler
+--,Autofocus processing algorithms:,Multilook registration plus MOCO
+--,Range processing weighting:,-40dB m = 81 Taylor
+--,Azimuth processing weighting:,-40dB m = 6 Dolph-Chebyshev
+--,Antenna azimuth weighting:,-50dB m = 6 Dolph-Chebyshev
+--,Antenna elevation weighting:,-60dB m = 6 Dolph-Chebyshev
+18,Sensor Parametric,ISAR Track,85,66309,0,0,0,23,2,238,305419896,INACTIVE,4
+--,Sensor ID Number:,21
+--,Road curvature:,1.0
+--,Radial speed of vehicle:,1.0
+--,Track ID:,10
+--,Track type:,Link 16
+--,Direction of road curvature:,Anti-clockwise
+--,Direction of vehicle radial velocity:,Away from the sensor
+19,Sensor Parametric,RADAR Element,85,69632,0,0,0,83,2,238,305419896,INACTIVE,4
+--,Sensor ID Number:,21
+--,Elements in table,1
+--,Element size:,[0],12
+--,Element Bit offset:,[0],0
+--,Sensor Element ID:,[0],0
+--,Type of Element:,[0],Unsigned Binary
+--,Physical characteristic:,[0],Velocity (image referenced (x, y))
+--,RF Centre frequency:,[0],1.0
+--,RF Bandwidth:,[0],1.0
+--,Mean Doppler Frequency:,[0],1.0
+--,Look Centre Frequency:,[0],1.0
+--,Look Bandwidth:,[0],1.0
+--,Minimum Element Value:,[0],1.0
+--,Maximum Element Value:,[0],1.0
+--,Minimum Physical Value:,[0],1.0
+--,Maximum Physical Value:,[0],1.0
+--,Polarisation:,[0],VV
+--,Use of element:,[0],Quadrature (Q)
+--,Transfer Function Type:,[0],Linear
+20,Sensor,Sensor Sample "x" Coordinate,188,16,0,0,0,40,2,238,305419896,INACTIVE,4
+--,Sensor ID Number:,60
+--,Sample "x" coordinate:,00000000000000000000000000000000...
+21,Sensor,Sensor Sample "y" Coordinate,188,32,0,0,0,40,2,238,305419896,INACTIVE,4
+--,Sensor ID Number:,60
+--,Sample "y" coordinate:,00000000000000000000000000000000...
+22,Sensor,Sensor Sample "z" Coordinate,188,48,0,0,0,40,2,238,305419896,INACTIVE,4
+--,Sensor ID Number:,60
+--,Sample "z" coordinate:,00000000000000000000000000000000...
+23,Sensor,Sensor Sample Timing,188,80,0,0,0,40,2,238,305419896,INACTIVE,4
+--,Sensor ID Number:,60
+--,Sample Timing:,00000000000000000000000000000000...
+24,Sensor,4607 GMTI,188,96,0,0,0,40,2,238,305419896,INACTIVE,4
+--,Sensor ID Number:,60
+--,4607 GMTI Data:,00000000000000000000000000000000...
+25,Sensor,4609 Motion Imagery,188,112,0,0,0,40,2,238,305419896,INACTIVE,4
+--,Sensor ID Number:,60
+--,4609 Motion Imagery Data:,00000000000000000000000000000000...
+26,Sensor,Range Finder,188,128,0,0,0,8,2,238,305419896,INACTIVE,4
+--,Sensor ID Number:,60
+--,Range:,1.0
+27,Sensor Parametric,JPEG 2000 Description,85,259,0,0,0,9,2,238,305419896,INACTIVE,4
+--,Sensor ID Number:,21
+--,Codestream capability:,Profile 0 (see ITU-T T.800 | IS 15444-1 AMD-1)
+--,Progression order:,Layer-Resolution-Component-Position
+--,Number of decomposition levels:,8
+--,Number of layers:,64
+--,Number of components:,32
+--,JPEG 2000 Tiling performed:,JPEG 2000 Tiling has been used
+--,IREP:,YCbCr601
+28,Sensor Parametric,JPEG 2000 Index,96,260,0,0,0,40,2,238,305419896,INACTIVE,4
+--,Sensor ID Number:,32
+--,Number of Elements in table,10
+--,Highest order of progression index:,[0],0
+--,Highest order of progression index:,[1],0
+--,Highest order of progression index:,[2],0
+--,Highest order of progression index:,[3],0
+--,Highest order of progression index:,[4],0
+--,Highest order of progression index:,[5],0
+--,Highest order of progression index:,[6],0
+--,Highest order of progression index:,[7],0
+--,Highest order of progression index:,[8],0
+--,Highest order of progression index:,[9],0
+29,Format Description,Format Time Tag,0,1,0,0,1,8,0,0,0,INACTIVE,3
+--,Tick Value:,0.02
+30,Target,General Target Information,17,0,0,0,1,130,0,0,0,INACTIVE,3
+--,Target ID Number:,0
+--,Target Type:,POINT
+--,Target Priority:,PRIORITY 3
+--,Basic Encyclopaedia (BE) Number:,Target0
+--,Target Security Classification:,<NULL>
+--,Required Time on Target:,<NULL>
+--,Requested Sensor Type:,LINESCAN
+--,Requested Sensor Response Band:,IR
+--,Requested Collection Technique:,VERTICAL
+--,Number of Locations:,1
+--,Requester Address Index:,0; 1
+--,Target Name:,Target 0
+31,Target,General Target EEI,17,8192,0,0,1,40,0,1,0,INACTIVE,3
+--,Target ID Number:,0
+--,Location ID Number:,0
+--,Target Category/Essential Elements of Information:,EEI for target 0 location 0
+--,EEI/Target Category Designation Scheme:,NATO STANAG 3596
+--,Weather Over the Target Reporting Code:,3668ALP
+32,Target,General Target Location,17,4096,0,0,1,71,0,2,0,INACTIVE,3
+--,Target ID Number:,0
+--,Location ID Number:,0
+--,Start_ Target or Corner Location:,51.35469,-1.868
+--,Start_ Target or Corner Elevation:,10.0
+--,Target Diameter or Width:,5.0
+--,Map Series:,OS
+--,Sheet Number of Target Location:,198
+--,Inverse Map Scale:,25000.0
+--,Map Edition Number:,1
+--,Map Edition Date:,<NULL>
+33,Target,General Target Remarks,17,12288,0,0,1,1024,0,3,0,INACTIVE,3
+--,Target ID Number:,0
+--,Location ID Number:,0
+--,Remarks:,Target 0 is point feature 10m diameter
+34,Mission,General Administrative Reference,16,0,0,0,1,20,0,0,0,INACTIVE,3
+--,Mission Number:,LINE-8
+--,Mission Start Time:,2003-06-12, 12:11:00.000000
+--,Project Identifier Code:,L8
+--,Number of Targets:,2
+--,Number of Requesters:,2
+35,Mission,Mission Security,16,16,0,0,1,1156,0,1,0,INACTIVE,3
+--,Mission Security Classification:,UNCLASSIFIED
+--,Date:,2003-06-12, 12:11:00.000000
+--,Authority:,General Dynamics UK
+--,Downgrading Instructions:,Not applicable
+36,Mission,Air Tasking Order,16,32,0,0,1,50,0,2,0,INACTIVE,3
+--,Air Tasking Order Title:,LINE-8
+--,Air Tasking Order Originator:,General Dynamics UK
+--,Air Tasking Order Serial Number:,LINE-8
+--,Date Time Group:,2003-06-12, 12:11:00.000000
+--,Qualifier:,001
+--,Qualifier Serial Number:,1
+37,Mission,Collection Platform Identification,16,48,0,0,1,37,0,3,0,INACTIVE,3
+--,Squadron:,Squad1
+--,Wing:,Wng1
+--,Aircraft Type:,Simulation
+--,Aircraft Tail Number:,000001
+--,Sortie Number:,1
+--,Pilot ID:,GD
+38,Mission,Requester,16,64,0,0,1,849,0,4,0,INACTIVE,3
+--,Requester Index Number:,0
+--,Report Message Type:,RECCEXREP
+--,Message Communications Channel:,internet
+--,Secondary Imagery Dissemination Channel:,CD-ROM
+--,Latest Time of Intelligence Value:,2003-06-12, 12:11:00.000000
+--,Requester Serial Number:,1
+--,Mission Priority:,PRIORITY 3
+--,Requester Address:,General Dynamics United Kingdom Ltd
+--,Requester Type:,MISSION REQUESTER
+--,Operation Codeword:,LINE-8
+--,Operation Plan Originator & Number:,GDUK LINE-8
+--,Operation Option Name - Primary:,Primary
+--,Operation Option Name - Secondary:,Secondary
+--,Exercise Nickname:,LINE-8
+--,Message Additional Identifier:,Test stream LINE-8
+39,Mission,Requester Remarks,16,96,0,0,1,1024,0,5,0,INACTIVE,3
+--,Requester Index Number:,0
+--,Remarks:,Remarks from requester ID 0
+40,Sensor Parametric,Passive Sensor Element,64,4096,0,0,1,21,0,0,0,INACTIVE,3
+--,Sensor ID Number:,0
+--,Elements in table,1
+--,Element size:,[0],8
+--,Element Bit offset:,[0],0
+--,Sensor Element ID:,[0],0
+--,Minimum wavelength:,[0],3.8e-07
+--,Maximum wavelength:,[0],7.05e-07
+41,Sensor Parametric,Sensor Position,64,16,0,0,1,24,0,1,0,INACTIVE,3
+--,Sensor ID Number:,0
+--,X vector component:,5.0
+--,Y vector component:,0.0
+--,Z vector component:,0.0
+42,Sensor Parametric,Minimum Sensor Attitude,64,32,0,0,1,24,0,2,0,INACTIVE,3
+--,Sensor ID Number:,0
+--,Rotation about Z-axis:,0.0
+--,Rotation about Y-axis:,-89.99998127603166
+--,Rotation about X-axis:,0.0
+43,Sensor Parametric,Sensor Operating Status,64,6,0,0,1,256,0,3,0,INACTIVE,3
+--,Sensor ID Number:,0
+--,Status:,In fine working order
+44,Sensor Parametric,PASSIVE Sensor Description,64,1,0,0,1,61,0,4,0,INACTIVE,3
+--,Sensor ID Number:,0
+--,Frame or Swath size:,1
+--,Active Line time:,0.005000000000000001
+--,Line size of active data:,1200
+--,Packets per Frame or Swath:,1
+--,Size of tile in the high frequency scanning direction:,1200
+--,Size of tile in the low frequency scanning direction:,1
+--,Number of tiles across a line:,1
+--,Number of swaths per frame:,1
+--,Sensor mode:,Off
+--,Pixel size:,8
+--,Elements per pixel:,1
+--,Data Ordering:,INACTIVE (Unispectral data)
+--,Line FOV:,143.2394487827058
+--,Frame or Swath FOV:,0.057295779513082325
+--,Number of Fields:,INVALID
+--,High frequency scanning direction:,positive direction
+--,Low frequency scanning direction:,negative direction
+45,Sensor Parametric,Sensor Identification,64,0,0,0,1,35,0,5,0,INACTIVE,3
+--,Platform ID Number:,0
+--,Sensor ID Number:,0
+--,Sensor Type:,LINESCAN
+--,Sensor Serial Number:,<NULL>
+--,Sensor Model Number:,<NULL>
+--,Sensor Modelling Method:,BASIC SEQUENTIAL MODELLING
+--,Number of Gimbals:,0
+46,Sensor Parametric,Sensor Calibration,64,2,0,0,1,99,0,6,0,INACTIVE,3
+--,Sensor ID Number:,0
+--,Calibration date:,2003-02-01, 12:50:00.000000
+--,Calibration Agency:,General Dynamics UK
+47,Sensor Parametric,JPEG Sensor Huffman,64,258,0,0,1,420,0,7,0,INACTIVE,3
+--,Sensor ID Number:,0
+--,DHT Define Huffman Table marker:,FFC4
+--,Lh Length of parameters:,418
+--,Number of Tables (max 8),4
+--,TcTh Huffman Table Class and Table Identifier:,[0],Table 0 AC
+--,L1 Number of codes in each length:,[0],0; 2; 1; 3; 3; 2; 4; 3; 5; 5; 4; 4; 0; 0; 1; 125
+--,Vij Huffman Code Values:,[0],01020300041105122131410613516107...
+--,TcTh Huffman Table Class and Table Identifier:,[1],Table 1 AC
+--,L1 Number of codes in each length:,[1],0; 2; 1; 2; 4; 4; 3; 4; 7; 5; 4; 4; 0; 1; 2; 119
+--,Vij Huffman Code Values:,[1],00010203110405213106124151076171...
+--,TcTh Huffman Table Class and Table Identifier:,[2],Table 0 DC
+--,L1 Number of codes in each length:,[2],0; 1; 5; 1; 1; 1; 1; 1; 1; 0; 0; 0; 0; 0; 0; 0
+--,Vij Huffman Code Values:,[2],000102030405060708090A0B
+--,TcTh Huffman Table Class and Table Identifier:,[3],Table 1 DC
+--,L1 Number of codes in each length:,[3],0; 3; 1; 1; 1; 1; 1; 1; 1; 1; 1; 0; 0; 0; 0; 0
+--,Vij Huffman Code Values:,[3],000102030405060708090A0B
+48,Sensor Parametric,JPEG Sensor Quantisation,64,257,0,0,1,134,0,8,0,INACTIVE,3
+--,Sensor ID Number:,0
+--,DQT Define Quantisation Table Marker:,FFDB
+--,Lq Length of parameters:,132
+--,Number of Tables (max 4),2
+--,PqTq Quantisation table element precision:,[0],Table 0, 8-bit precision
+--,Qk Quantisation table elements in zigzag order:,[0],100B0C0E0C0A100E0D0E121110131828...
+--,PqTq Quantisation table element precision:,[1],Table 1, 8-bit precision
+--,Qk Quantisation table elements in zigzag order:,[1],1112121815182F1A1A2F634238426363...
+49,Sensor Parametric,Sync Hierarchy and Image Build,64,3,0,0,1,8,0,9,0,INACTIVE,3
+--,Sensor ID Number:,0
+--,SUPER FRAME hierarchy:,0
+--,FRAME hierarchy:,0
+--,FIELD hierarchy:,0
+--,SWATH hierarchy:,0
+--,TILE hierarchy:,0
+--,LINE hierarchy:,1
+--,Build direction of TILE image components:,not used
+--,Frame Coverage Relationship:,None
+50,Sensor Parametric,Sensor Data Timing,64,4,0,0,1,32,0,10,0,INACTIVE,3
+--,Sensor ID Number:,0
+--,Frame period:,<NULL>
+--,Intra Frame Time:,<NULL>
+--,Line period:,0.0051
+--,Intra Line time:,0.0001
+51,Segment/Event Index,End of Segment Marker,48,1,0,0,1,8,0,0,0,INACTIVE,3
+--,Size of segment:,11148
+52,Platform,Minimum Dynamic Platform,32,0,0,0,0,107,1,0,1,INACTIVE,3
+--,Platform ID Number:,0
+--,Platform Time:,2003-03-26, 16:31:00.020000,FULL SPECIFICATION
+--,Platform Geo-Location:,51.354711209883625,-1.8677478001270087,FULL SPECIFICATION
+--,MSL Altitude:,<NULL>,FAIL
+--,AGL Altitude:,500.0,FULL SPECIFICATION
+--,GPS Altitude:,<NULL>,FAIL
+--,Platform true airspeed:,<NULL>,FAIL
+--,Platform ground speed:,257.0,FULL SPECIFICATION
+--,Platform true Course:,45.062935428991615,FULL SPECIFICATION
+--,Platform true Heading:,45.00010522957486,FULL SPECIFICATION
+--,Platform Pitch:,0.0,FULL SPECIFICATION
+--,Platform Roll:,0.0,FULL SPECIFICATION
+--,Platform Yaw:,0.06283019941676306,FULL SPECIFICATION
+53,Sensor,Sensor,128,0,0,0,0,1200,1,0,1,LINE SYNC,3
+--,Sensor ID Number:,0
+--,Sensor data:,00000000000000000000000000000000...
+54,Segment/Event Index,Segment Index,48,256,0,0,1,80,1,0,3901,INACTIVE,3
+--,Segment ID Number:,1
+--,Start of data segment:,11148
+--,End of data segment:,18756481
+--,Start time of recording:,2003-03-26, 16:31:00.020000
+--,Stop time of recording:,2003-03-26, 16:32:18.020000
+--,Start of Header Time Tag:,1
+--,End of Header Time Tag:,3901
+--,Aircraft location at the start of recording of the segment:,<NULL>,<NULL>
+--,Aircraft location at the end of recording of the segment:,51.40429667833545,-1.6292281129160922
+55,Sensor Parametric,Sensor Index,64,513,0,0,1,80,1,13,3901,INACTIVE,3
+--,Sensor ID Number:,0
+--,Segment ID Number:,1
+--,Sensor Activations in table,1
+--,Collection Start Time:,[0],2003-03-26, 16:31:00.020000
+--,Collection Stop Time:,[0],2003-03-26, 16:32:18.020000
+--,Start Header Time Tag:,[0],1
+--,End Header Time Tag:,[0],3901
+--,Aircraft location at Collection Start Time:,[0],51.354711209883625,-1.8677478001270087
+--,Aircraft location at Collection End Time:,[0],51.40429667833545,-1.6292281129160922
+--,Sensor Start Position:,[0],11297
+--,Sensor End Position:,[0],18756481
+56,Segment/Event Index,End of Record Marker,48,0,0,0,0,8,2,0,3901,INACTIVE,3
+--,Size of record:,18767923
+
