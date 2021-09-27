@@ -14,3 +14,9 @@ The tool is not sufficient to certify a file as being compliant with the standar
 outputs should be carefully reviewed by someone familiar with the NPIF standard.
 
 Please note the Licence conditions (see LICENSE.txt)
+
+## NPIF Splitter
+
+This is a support application to split a STANAG 7023 file into parts (one file per table).
+This is probably not of general interest, but may be useful for debugging or generating
+test cases.
