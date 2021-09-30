@@ -12,8 +12,8 @@ Count,Source,Table,SA,DFA,F1,F2,F3,Size,Segment,Number,Time Tag,Sync Type,Editio
 --,Target Security Classification:,<NULL>
 --,Required Time on Target:,<NULL>
 --,Requested Sensor Type:,FRAMING
---,Requested Sensor Response Band:,0, UNKNOWN EMUMERATION ####****
---,Requested Collection Technique:,0, UNKNOWN EMUMERATION ####****
+--,Requested Sensor Response Band:,0, UNKNOWN ENUMERATION ####****
+--,Requested Collection Technique:,0, UNKNOWN ENUMERATION ####****
 --,Number of Locations:,1
 --,Requester Address Index:,0
 --,Target Name:,Target0
@@ -15391,8 +15391,8 @@ Count,Source,Table,SA,DFA,F1,F2,F3,Size,Segment,Number,Time Tag,Sync Type,Editio
 --,Target Security Classification:,<NULL>
 --,Required Time on Target:,<NULL>
 --,Requested Sensor Type:,FRAMING
---,Requested Sensor Response Band:,0, UNKNOWN EMUMERATION ####****
---,Requested Collection Technique:,0, UNKNOWN EMUMERATION ####****
+--,Requested Sensor Response Band:,0, UNKNOWN ENUMERATION ####****
+--,Requested Collection Technique:,0, UNKNOWN ENUMERATION ####****
 --,Number of Locations:,1
 --,Requester Address Index:,0
 --,Target Name:,Target0
@@ -31354,8 +31354,8 @@ Count,Source,Table,SA,DFA,F1,F2,F3,Size,Segment,Number,Time Tag,Sync Type,Editio
 --,Target Security Classification:,<NULL>
 --,Required Time on Target:,<NULL>
 --,Requested Sensor Type:,FRAMING
---,Requested Sensor Response Band:,0, UNKNOWN EMUMERATION ####****
---,Requested Collection Technique:,0, UNKNOWN EMUMERATION ####****
+--,Requested Sensor Response Band:,0, UNKNOWN ENUMERATION ####****
+--,Requested Collection Technique:,0, UNKNOWN ENUMERATION ####****
 --,Number of Locations:,1
 --,Requester Address Index:,0
 --,Target Name:,Target0
