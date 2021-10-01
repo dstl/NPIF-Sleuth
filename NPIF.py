@@ -2701,7 +2701,7 @@ class NPIF():
         DT_Event_Index_DT: "Event Index",
         DT_User_Defined_DT: "User Defined",
         DT_Sensor_ID_DT: "Sensor Identification",
-        DT_PASSIVE_Sensor_Des_DT: "PASSIVE Sensor Description",
+        DT_PASSIVE_Sensor_Des_DT: "Passive Sensor Description",
         DT_Sensor_Calibration_DT: "Sensor Calibration",
         DT_Sync_Hier_and_ImBld_DT: "Sync Hierarchy and Image Build",
         DT_Sensor_Data_Timing_DT: "Sensor Data Timing",
