@@ -23,7 +23,7 @@ Count,Source,Table,SA,DFA,F1,F2,F3,Size,Segment,Number,Time Tag,Sync Type,Editio
 --,Rotation about Z-axis:,0.0
 --,Rotation about Y-axis:,-28.64788975654116
 --,Rotation about X-axis:,0.0
-4,Sensor Parametric,PASSIVE Sensor Description,64,1,0,0,1,61,0,2,0,INACTIVE,3
+4,Sensor Parametric,Passive Sensor Description,64,1,0,0,1,61,0,2,0,INACTIVE,3
 --,Sensor ID Number:,0
 --,Frame or Swath size:,16
 --,Active Line time:,0.005000000000000001
@@ -102,7 +102,7 @@ Count,Source,Table,SA,DFA,F1,F2,F3,Size,Segment,Number,Time Tag,Sync Type,Editio
 --,Platform Pitch:,0.0,FULL SPECIFICATION
 --,Platform Roll:,0.0,FULL SPECIFICATION
 --,Platform Yaw:,0.06283019941676306,FULL SPECIFICATION
-11,Sensor Parametric,PASSIVE Sensor Description,64,1,0,0,0,61,1,0,5,INACTIVE,3
+11,Sensor Parametric,Passive Sensor Description,64,1,0,0,0,61,1,0,5,INACTIVE,3
 --,Sensor ID Number:,0
 --,Frame or Swath size:,16
 --,Active Line time:,0.005000000000000001
@@ -13963,7 +13963,7 @@ Count,Source,Table,SA,DFA,F1,F2,F3,Size,Segment,Number,Time Tag,Sync Type,Editio
 --,Platform Pitch:,0.0,FULL SPECIFICATION
 --,Platform Roll:,0.0,FULL SPECIFICATION
 --,Platform Yaw:,-1.8988954776087523,FULL SPECIFICATION
-1766,Sensor Parametric,PASSIVE Sensor Description,64,1,0,0,0,61,1,1,3901,INACTIVE,3
+1766,Sensor Parametric,Passive Sensor Description,64,1,0,0,0,61,1,1,3901,INACTIVE,3
 --,Sensor ID Number:,0
 --,Frame or Swath size:,16
 --,Active Line time:,0.005000000000000001
@@ -14003,7 +14003,7 @@ Count,Source,Table,SA,DFA,F1,F2,F3,Size,Segment,Number,Time Tag,Sync Type,Editio
 --,Rotation about Z-axis:,0.0
 --,Rotation about Y-axis:,-28.64788975654116
 --,Rotation about X-axis:,0.0
-1771,Sensor Parametric,PASSIVE Sensor Description,64,1,0,0,1,61,1,4,3901,INACTIVE,3
+1771,Sensor Parametric,Passive Sensor Description,64,1,0,0,1,61,1,4,3901,INACTIVE,3
 --,Sensor ID Number:,0
 --,Frame or Swath size:,16
 --,Active Line time:,0.005000000000000001
