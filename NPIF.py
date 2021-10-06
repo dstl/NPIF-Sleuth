@@ -2709,7 +2709,7 @@ class NPIF():
         DT_Sensor_Position_DT: "Sensor Position",
         DT_Min_Sensor_Att_DT: "Minimum Sensor Attitude",
         DT_Comp_Sensor_Att_DT: "Comprehensive Sensor Attitude",
-        DT_Gimbals_Position_DT: "Gimbals Position Data Table",
+        DT_Gimbals_Position_DT: "Gimbals Position",
         DT_Min_Gimbals_Att_DT: "Minimum Gimbals Attitude",
         DT_Comp_Gimbals_Att_DT: "Comprehensive Gimbals Attitude",
         DT_Sensor_Index_DT: "Sensor Index",
