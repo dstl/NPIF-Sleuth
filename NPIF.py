@@ -330,6 +330,62 @@ class NPIF_Header():
             # set to true to indicate no data packet extraction
         self.tablename = None        # text
 
+    """
+    Serialise the header values to a byte array.
+    """
+    def serialise(self):
+        f = struct.pack('>4B3IQB5s2s',
+        self.edition,
+        self._build_flags(),
+        self.segmentnum,
+        self.sourceaddress,
+        self.datafileaddress,
+        self.datafilesize,
+        self.datafilenum,
+        self.timetag,
+        self.Lookup_Sync_Type_Text(self.synctype),
+        binascii.unhexlify(self.reserved),
+        binascii.unhexlify(self.headcrc)
+        )
+        return f
+
+    def Lookup_Sync_Type_Text(self, text):
+        """
+        Return an integer enumeration corresponding to the given String.
+
+        Given a string describing the Sync type from a packet header return an int
+        derived from the STANAG 7023 enumeration for Sync code.
+
+        """
+        if text == "INACTIVE":
+            return 0
+        elif text == "SUPER FRAME SYNC":
+            return 1
+        elif text == "FRAME SYNC":
+            return 2
+        elif text == "FIELD SYNC":
+            return 4
+        elif text == "SWATH SYNC":
+            return 8
+        elif text == "LINE SYNC":
+            return 10
+        elif text == "TILE SYNC":
+            return 12
+        else:
+            raise ValueError("Invalid text value for sync code lookup: " + text)
+
+    def _build_flags(self):
+        """
+        Get the header flags as an encoded value
+        """
+        intflags = 0
+        if self.ambleflag:
+            intflags = intflags | 8
+        if self.crcflag:
+            intflags = intflags | 4
+        if self.compressflag:
+            intflags = intflags | 2
+        return intflags
 
 class NPIF_DataContent():
     """
