@@ -4,30 +4,30 @@
 #
 # Author:      sfhelsdon-dstl
 # Originally Created:     05/07/2013
-# 
+#
 ############################################################################
 # Intellectual Property Rights
 #
 # The MIT License (MIT)
 #
 # Copyright (c) 2018 Dstl
-# 
-# Permission is hereby granted, free of charge, to any person obtaining a 
-# copy of this software and associated documentation files (the "Software"), 
+#
+# Permission is hereby granted, free of charge, to any person obtaining a
+# copy of this software and associated documentation files (the "Software"),
 # to deal in the Software without restriction, including without limitation
-# the rights to use, copy, modify, merge, publish, distribute, sublicense, 
-# and/or sell copies of the Software, and to permit persons to whom the 
+# the rights to use, copy, modify, merge, publish, distribute, sublicense,
+# and/or sell copies of the Software, and to permit persons to whom the
 # Software is furnished to do so, subject to the following conditions:
-# 
+#
 # The above copyright notice and this permission notice shall be included in
 # all copies or substantial portions of the Software.
-# 
-# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
-# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
-# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL 
-# THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER 
-# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING 
-# FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER 
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+# THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+# FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 # DEALINGS IN THE SOFTWARE.
 #
 #-------------------------------------------------------------------------
@@ -979,7 +979,7 @@ class NPIF():
 
     def Set_tcontents(self, new):
         """
-        Set tcontents to the given dict value in data model 
+        Set tcontents to the given dict value in data model
         Packet Data related info.
         """
         self.tdat.tcontents = new
@@ -2157,10 +2157,10 @@ class NPIF():
             return str(eint) + ", " + self.TXT_UNKN_ENUM
 
     # End of lookup functions
-    
+
     # Now follows a set of conversion functions, whch generally convert a raw value into a more readable form
     ##############################################################################
-    
+
     def Conv_DTG(self, dtg):
         """
         Given a buffer containing the 7023 encoded date-time info, return a
@@ -2462,7 +2462,7 @@ class NPIF():
             return invalue
 
     ###################################################################################
-    # Now follows a set of hardcoded data, much of which is extracted from the standard 
+    # Now follows a set of hardcoded data, much of which is extracted from the standard
     #
     # Data: the different data types used and the basic functions to be applied
     # to each of them
@@ -4641,7 +4641,7 @@ class Tabledata(NPIF):
                     z += 1
                     if self.TXT_NULL in str(self.tdat.tcontents[a]):
                         z -= 1
-                    # z records the number of non null in data8 to data20 (hopefully 0) 
+                    # z records the number of non null in data8 to data20 (hopefully 0)
                 # how many non-null in data6
                 if self.TXT_NULL in str(self.tdat.tcontents['Data 6']):
                     d6 = 0
@@ -5323,11 +5323,11 @@ class Tablelist (NPIF):
         self.frontbytelen = 0       # if there is some data ahead of 1st sync code its size in bytes will be here
         self.filename = ""          # filename of loaded file
         self.segmentlist = None     # list of unique segment numbers in file
-        self.dataseglist = None     # list of what data segments (i.e. excludes 0 as preamble) are 'ended' in the 
+        self.dataseglist = None     # list of what data segments (i.e. excludes 0 as preamble) are 'ended' in the
                                     # file (in file order as extracted from End_Segment_Marker tables)
         self.filesize = None        # size in bytes of the loaded file
         self.errors = NPIF_Error()  # NPIF_Error object
-        self.packetdict = None      # dict with keys of tablecode and values which are lists of those indices of self.packets 
+        self.packetdict = None      # dict with keys of tablecode and values which are lists of those indices of self.packets
                                     # with that tablecode
         self.postamblestyle = None  # integer to indicate postable style: 0= none, 1= end of each segment, 2= attached to preamble
         self.sensoridlist = []      # list of unique sensor IDs in file
@@ -5411,8 +5411,8 @@ class Tablelist (NPIF):
         # sort segment list, just in case of odd (i.e. broken) file
         seglist.sort()
         self.segmentlist = seglist
-        # 
-        # Create packetdict info. This is a dict with keys of tablecode (i.e. what data table is 
+        #
+        # Create packetdict info. This is a dict with keys of tablecode (i.e. what data table is
         # present) and values which are lists of those packets in the file with that tablecode.
         # e.g. packetdict[self.DT_End_Segment_Marker_DT] might return [45, 176, 2068] which are
         # the indices of self.packets which contain that table type.
@@ -5489,14 +5489,17 @@ class Tablelist (NPIF):
         If seg is given, only tables with segment number = seg will be counted.
         If nothing matches, an empty dict is returned.
         """
-        tdict = collections.defaultdict(lambda: 0)
+        # use OrderedDict so it's ordered by first instance of each table
+        tdict = collections.OrderedDict()
         if seg is None:
             for t in self.packets:
-                tdict[t.hdr.tablecode] += 1
+                if t.hdr.tablecode not in tdict : tdict[t.hdr.tablecode] = 1
+                else: tdict[t.hdr.tablecode] += 1
         else:
             for t in self.packets:
                 if t.hdr.segmentnum == seg:
-                    tdict[t.hdr.tablecode] += 1
+                    if t.hdr.tablecode not in tdict : tdict[t.hdr.tablecode] = 1
+                    else: tdict[t.hdr.tablecode] += 1
         return tdict
 
     def Print_Table_Summary(self, tdict=None, obuf=sys.stdout):

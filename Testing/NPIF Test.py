@@ -2618,12 +2618,10 @@ class TestTablelist(unittest.TestCase):
         obuf = io.StringIO()
         a.Print_Table_Summary(obuf=obuf)
         newdata1 = obuf.getvalue()
-        print(newdata1.splitlines(True))
         obuf.close()
         refname1 = './testPrint_Table_Summary.txt'
         reffile1 = open(refname1, 'r')
         refdata1 = reffile1.readlines()
-        print(refdata1)
         reffile1.close()
         result1 = difflib.unified_diff(refdata1,newdata1.splitlines(True))
         test1 = ''.join(result1)
