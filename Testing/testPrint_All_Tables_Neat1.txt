@@ -145,7 +145,7 @@ Count,Source,Table,SA,DFA,F1,F2,F3,Size,Segment,Number,Time Tag,Sync Type,Editio
 --,Sensor mode:,ON
 --,Pixel size:,16
 --,Elements per pixel:,8
---,Data ordering:,4, UNKNOWN EMUMERATION ####****
+--,Data ordering:,4, UNKNOWN ENUMERATION ####****
 --,vld orientation:,Port; i.e. value of alpha is negative
 13,Sensor Parametric,RADAR Collection Plane Image Geometry,85,66304,0,0,0,33,2,238,305419896,INACTIVE,4
 --,Sensor ID Number:,21

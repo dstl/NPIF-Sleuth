@@ -365,7 +365,7 @@ class NPIF():
     HDR_LEN = 32            # Length of the Header. Does not include synchronisation field
     SYNC_LEN = 10           # sync filed length
     SYNC_FIELD = b"\x0D\x79\xAB\x21\x6F\x34\x1A\x72\xB9\x1C" # value of the sync field
-    TXT_UNKN_ENUM = "UNKNOWN EMUMERATION ####****"      # Text for an unknown enumeration value
+    TXT_UNKN_ENUM = "UNKNOWN ENUMERATION ####****"      # Text for an unknown enumeration value
     TXT_BAD_DTG = "INVALID DTG  ####****"               # Text for an invalid Date-Time value
     TXT_BAD_ASCII = "INVALID ASCII PRESENT ####****"    # text for a bad ASCII field (generally with non ASCII characters)
     TXT_NULL = "<NULL>"                                 # Text for a NULL value
