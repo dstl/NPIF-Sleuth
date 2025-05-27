@@ -10,40 +10,40 @@
 # The MIT License (MIT)
 #
 # Copyright (c) 2018 Dstl
-# 
-# Permission is hereby granted, free of charge, to any person obtaining a 
-# copy of this software and associated documentation files (the "Software"), 
+#
+# Permission is hereby granted, free of charge, to any person obtaining a
+# copy of this software and associated documentation files (the "Software"),
 # to deal in the Software without restriction, including without limitation
-# the rights to use, copy, modify, merge, publish, distribute, sublicense, 
-# and/or sell copies of the Software, and to permit persons to whom the 
+# the rights to use, copy, modify, merge, publish, distribute, sublicense,
+# and/or sell copies of the Software, and to permit persons to whom the
 # Software is furnished to do so, subject to the following conditions:
-# 
+#
 # The above copyright notice and this permission notice shall be included in
 # all copies or substantial portions of the Software.
-# 
-# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
-# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
-# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL 
-# THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER 
-# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING 
-# FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER 
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+# THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+# FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 # DEALINGS IN THE SOFTWARE.
 #
 #-------------------------------------------------------------------------
 """
 Test code for the NPIF module.
-""" 
+"""
 
 # NOTE that some of the test cases require access to the 7023 Golden files
 # edit the location of the appropriate files in the lines below
 
 # enter the location of the three golden files here
 # first the file: 64-sensors.7023
-f64sensors_GOLDEN = "U:\\My Documents\\64-sensors.7023"
+f64sensors_GOLDEN = "D:\\Software_dev\\golden\\64-sensors.7023"
 # second the file: line-8.7023
-fline8_GOLDEN = 'U:\\My Documents\\line-8.7023'
+fline8_GOLDEN = 'D:\\Software_dev\\golden\\line-8.7023'
 # third the file: step-frame-8.7023
-fstepframe8_GOLDEN = 'U:\\My Documents\\step-frame-8.7023'
+fstepframe8_GOLDEN = 'D:\\Software_dev\\golden\\step-frame-8.7023'
 
 import unittest
 import struct
@@ -2618,13 +2618,16 @@ class TestTablelist(unittest.TestCase):
         obuf = io.StringIO()
         a.Print_Table_Summary(obuf=obuf)
         newdata1 = obuf.getvalue()
+        print(newdata1.splitlines(True))
         obuf.close()
         refname1 = './testPrint_Table_Summary.txt'
         reffile1 = open(refname1, 'r')
         refdata1 = reffile1.readlines()
+        print(refdata1)
         reffile1.close()
         result1 = difflib.unified_diff(refdata1,newdata1.splitlines(True))
         test1 = ''.join(result1)
+        #self.maxDiff = None
         self.assertEqual(test1, "")
 
     def testPrint_Basic_File_Data(self):
