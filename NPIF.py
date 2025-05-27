@@ -5511,7 +5511,7 @@ class Tablelist (NPIF):
         if tdict is None:
             tdict = self.Table_Summary()
         fstring = "{0:>10}, {1:<38}\n"
-        obuf.write(fstring.format("Occurances", "Table Name"))
+        obuf.write(fstring.format("Occurrences", "Table Name"))
         for keys in tdict:
             obuf.write(
                 fstring.format(tdict[keys], self.S7023_TABLE_NAMES[keys]))

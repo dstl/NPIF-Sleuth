@@ -1,4 +1,4 @@
-Occurances, Table Name                            
+Occurrences, Table Name                            
          1, Comprehensive Dynamic Platform        
          1, Minimum Gimbals Attitude              
          1, Sensor Compression                    
