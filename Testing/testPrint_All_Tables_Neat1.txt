@@ -83,7 +83,7 @@ Count,Source,Table,SA,DFA,F1,F2,F3,Size,Segment,Number,Time Tag,Sync Type,Editio
 --,Rotation acceleration about Z-axis:,286.4788975654116
 --,Rotation acceleration about Y-axis:,343.77467707849394
 --,Rotation acceleration about X-axis:,401.07045659157626
-8,Sensor Parametric,Gimbals Position Data Table,80,83,0,0,0,24,2,238,305419896,INACTIVE,4
+8,Sensor Parametric,Gimbals Positition,80,83,0,0,0,24,2,238,305419896,INACTIVE,4
 --,Sensor ID Number:,16
 --,Gimbal ID Number:,3
 --,X vector component:,11.0

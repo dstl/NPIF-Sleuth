@@ -10,7 +10,7 @@ Count,Source,Table,SA,DFA,F1,F2,F3,Size,Segment,Number,Time Tag,Sync Type,Editio
 5,Platform,Sensor Grouping,32,4260027,0,0,0,6,2,238,305419896,INACTIVE,4
 6,User Defined,User Defined,63,187,0,0,0,15,2,238,305419896,INACTIVE,4
 7,Sensor Parametric,Comprehensive Sensor Attitude,80,48,0,0,0,72,2,238,305419896,INACTIVE,4
-8,Sensor Parametric,Gimbals Position Data Table,80,83,0,0,0,24,2,238,305419896,INACTIVE,4
+8,Sensor Parametric,Gimbals Positition,80,83,0,0,0,24,2,238,305419896,INACTIVE,4
 9,Sensor Parametric,Comprehensive Gimbals Attitude,80,114,0,0,0,72,2,238,305419896,INACTIVE,4
 10,Sensor Parametric,Sensor Sample Coordinate Description,80,4112,0,0,0,19,2,238,305419896,INACTIVE,4
 11,Sensor Parametric,Sensor Sample Timing Description,80,4128,0,0,0,7,2,238,305419896,INACTIVE,4

@@ -28,7 +28,7 @@ Occurances, Table Name
          1, Sensor Position                       
          1, Minimum Sensor Attitude               
          1, Comprehensive Sensor Attitude         
-         1, Gimbals Position Data Table           
+         1, Gimbals Positition           
          1, Minimum Gimbals Attitude              
          1, Comprehensive Gimbals Attitude        
          1, Sensor Index                          
