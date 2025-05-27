@@ -91,7 +91,12 @@ def NPIF_Extract(fname):
 
 
 def main():
-    fname = Get7023_Filename()
+    if len(sys.argv) > 1:
+        # Use specified file name if provided
+        fname = sys.argv[1]
+    else:
+        # Use GUI
+        fname = Get7023_Filename()
     # check this looks like a 7023 file
     retval = NPIF_Extract(fname)
     if retval is not None:
