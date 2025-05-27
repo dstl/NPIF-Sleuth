@@ -20,7 +20,7 @@ Occurances, Table Name
          1, Event Index                           
          1, User Defined                          
          1, Sensor Identification                 
-         1, PASSIVE Sensor Description            
+         1, Passive Sensor Description            
          1, Sensor Calibration                    
          1, Sync Hierarchy and Image Build        
          1, Sensor Data Timing                    

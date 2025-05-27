@@ -46,7 +46,7 @@ Count,Source,Table,SA,DFA,F1,F2,F3,Size,Segment,Number,Time Tag,Sync Type,Editio
 41,Sensor Parametric,Sensor Position,64,16,0,0,1,24,0,1,0,INACTIVE,3
 42,Sensor Parametric,Minimum Sensor Attitude,64,32,0,0,1,24,0,2,0,INACTIVE,3
 43,Sensor Parametric,Sensor Operating Status,64,6,0,0,1,256,0,3,0,INACTIVE,3
-44,Sensor Parametric,PASSIVE Sensor Description,64,1,0,0,1,61,0,4,0,INACTIVE,3
+44,Sensor Parametric,Passive Sensor Description,64,1,0,0,1,61,0,4,0,INACTIVE,3
 45,Sensor Parametric,Sensor Identification,64,0,0,0,1,35,0,5,0,INACTIVE,3
 46,Sensor Parametric,Sensor Calibration,64,2,0,0,1,99,0,6,0,INACTIVE,3
 47,Sensor Parametric,JPEG Sensor Huffman,64,258,0,0,1,420,0,7,0,INACTIVE,3

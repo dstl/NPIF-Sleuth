@@ -20,7 +20,7 @@ Occurances, Table Name
          2, End of Segment Marker                 
          1, Segment Index                         
          2, Sensor Identification                 
-         4, PASSIVE Sensor Description            
+         4, Passive Sensor Description            
          2, Sync Hierarchy and Image Build        
          1, Sensor Index                          
          2, Minimum Sensor Attitude               
@@ -33,7 +33,7 @@ Occurances, Table Name
          1, Format Time Tag                       
          1, General Administrative Reference      
          1, Sensor Identification                 
-         1, PASSIVE Sensor Description            
+         1, Passive Sensor Description            
          1, JPEG Sensor Huffman                   
          1, Sync Hierarchy and Image Build        
          1, JPEG Sensor Quantisation              
@@ -53,7 +53,7 @@ Occurances, Table Name
        300, Sensor                                
          1, Segment Index                         
          1, Sensor Identification                 
-         3, PASSIVE Sensor Description            
+         3, Passive Sensor Description            
          1, Sync Hierarchy and Image Build        
          1, Sensor Index                          
          1, Minimum Sensor Attitude               

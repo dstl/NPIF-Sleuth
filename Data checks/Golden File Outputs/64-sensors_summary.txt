@@ -24,7 +24,7 @@ Occurances, Table Name
          3, Segment Index                         
          3, Event Index                           
        192, Sensor Identification                 
-       326, PASSIVE Sensor Description            
+       326, Passive Sensor Description            
        192, Sync Hierarchy and Image Build        
        130, Sensor Index                          
        192, JPEG Sensor Quantisation              
@@ -44,7 +44,7 @@ Occurances, Table Name
         64, Passive Sensor Element                
          1, End of Segment Marker                 
         64, Sensor Identification                 
-        64, PASSIVE Sensor Description            
+        64, Passive Sensor Description            
         64, Sync Hierarchy and Image Build        
         64, JPEG Sensor Quantisation              
         64, Minimum Sensor Attitude               
@@ -65,7 +65,7 @@ Occurances, Table Name
          1, Segment Index                         
          1, Event Index                           
         64, Sensor Identification                 
-       192, PASSIVE Sensor Description            
+       192, Passive Sensor Description            
         64, Sync Hierarchy and Image Build        
         64, Sensor Index                          
         64, JPEG Sensor Quantisation              
@@ -88,7 +88,7 @@ Occurances, Table Name
          2, Segment Index                         
          2, Event Index                           
         64, Sensor Identification                 
-        70, PASSIVE Sensor Description            
+        70, Passive Sensor Description            
         64, Sync Hierarchy and Image Build        
         66, Sensor Index                          
         64, JPEG Sensor Quantisation              
