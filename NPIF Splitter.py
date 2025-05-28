@@ -53,7 +53,7 @@ def NPIF_Split(fname):
     a.Open_7023_File(fname)
     tableIndex = 0
     for p in a.packets:
-        tablefile = open(noext + "_table_" + str(tableIndex).zfill(4) + ".7023", 'wb')
+        tablefile = open(noext + "_table_" + str(tableIndex).zfill(7) + ".7023", 'wb')
         tablefile.write(NPIF.SYNC_FIELD)
         tablefile.write(p.hdr.serialise())
         tablefile.write(p.tdat.dataraw)
