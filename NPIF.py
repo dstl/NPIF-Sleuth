@@ -330,10 +330,11 @@ class NPIF_Header():
             # set to true to indicate no data packet extraction
         self.tablename = None        # text
 
-    """
-    Serialise the header values to a byte array.
-    """
+
     def serialise(self):
+        """
+        Serialise the header values to a byte array.
+        """
         f = struct.pack('>4B3IQB5s2s',
         self.edition,
         self._build_flags(),
