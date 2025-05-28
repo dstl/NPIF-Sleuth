@@ -5788,19 +5788,27 @@ class Tablelist (NPIF):
                 self.errors.ELVL_LOW, "No End of Record Tables in File.")
         #
         if d.hdr.tablecode == self.DT_End_Record_Marker_DT:
-            p = self.packets[-2]
-            if d.hdr.segmentnum != p.hdr.segmentnum + 1:
-                if d.hdr.segmentnum == 255 and p.hdr.segmentnum == 255:
-                    # ok - segment number 255 is a special case (max value possible)
-                    pass
-                else:
-                    # segment numbering not correct for end of record table
-                    self.errors.adderror(self.errors.E_ENDRECMARK,
-                        self.errors.ELVL_LOW,
-                        "End of Record table has segment number " +
-                        str(d.hdr.segmentnum) +
-                        ", and previous packet is numbered " +
-                        str(p.hdr.segmentnum))
+            # deal with case where only one table in a file
+            if len(self.packets) == 1:
+                # end record table is only table in file
+                self.errors.adderror(self.errors.E_ENDRECMARK,
+                self.errors.ELVL_WARN, "End of Record Table is only table " +
+                    "in File.")
+            else:
+                p = self.packets[-2]
+                if d.hdr.segmentnum != p.hdr.segmentnum + 1:
+                    if d.hdr.segmentnum == 255 and p.hdr.segmentnum == 255:
+                        # ok - segment number 255 is a special case
+                        # (max value possible)
+                        pass
+                    else:
+                        # segment numbering not correct for end of record table
+                        self.errors.adderror(self.errors.E_ENDRECMARK,
+                            self.errors.ELVL_LOW,
+                            "End of Record table has segment number " +
+                            str(d.hdr.segmentnum) +
+                            ", and previous packet is numbered " +
+                            str(p.hdr.segmentnum))
         # check the reported file size
         calcsize = 0
         if len(rlist) > 0:
