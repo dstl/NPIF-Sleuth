@@ -10,40 +10,40 @@
 # The MIT License (MIT)
 #
 # Copyright (c) 2018 Dstl
-# 
-# Permission is hereby granted, free of charge, to any person obtaining a 
-# copy of this software and associated documentation files (the "Software"), 
+#
+# Permission is hereby granted, free of charge, to any person obtaining a
+# copy of this software and associated documentation files (the "Software"),
 # to deal in the Software without restriction, including without limitation
-# the rights to use, copy, modify, merge, publish, distribute, sublicense, 
-# and/or sell copies of the Software, and to permit persons to whom the 
+# the rights to use, copy, modify, merge, publish, distribute, sublicense,
+# and/or sell copies of the Software, and to permit persons to whom the
 # Software is furnished to do so, subject to the following conditions:
-# 
+#
 # The above copyright notice and this permission notice shall be included in
 # all copies or substantial portions of the Software.
-# 
-# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
-# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
-# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL 
-# THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER 
-# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING 
-# FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER 
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+# THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+# FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 # DEALINGS IN THE SOFTWARE.
 #
 #-------------------------------------------------------------------------
 """
 Test code for the NPIF module.
-""" 
+"""
 
 # NOTE that some of the test cases require access to the 7023 Golden files
 # edit the location of the appropriate files in the lines below
 
 # enter the location of the three golden files here
 # first the file: 64-sensors.7023
-f64sensors_GOLDEN = "U:\\My Documents\\64-sensors.7023"
+f64sensors_GOLDEN = "D:\\Software_dev\\golden\\64-sensors.7023"
 # second the file: line-8.7023
-fline8_GOLDEN = 'U:\\My Documents\\line-8.7023'
+fline8_GOLDEN = 'D:\\Software_dev\\golden\\line-8.7023'
 # third the file: step-frame-8.7023
-fstepframe8_GOLDEN = 'U:\\My Documents\\step-frame-8.7023'
+fstepframe8_GOLDEN = 'D:\\Software_dev\\golden\\step-frame-8.7023'
 
 import unittest
 import struct
@@ -277,6 +277,62 @@ class TestNPIF_Header(unittest.TestCase):
         self.assertEqual(self.Tabdata.tablename, None)
         self.assertTrue(hasattr(self.Tabdata, 'errors'))
 
+    def test__build_flags(self):
+        # test generation of the encoded value for build flags
+        comp = 2
+        crc = 4
+        amble = 8
+        self.Tabdata.compressflag = 1
+        self.Tabdata.crcflag = 0
+        self.Tabdata.ambleflag = 0
+        v = self.Tabdata._build_flags()
+        self.assertEqual(v, comp)
+        self.Tabdata.crcflag = 1
+        v = self.Tabdata._build_flags()
+        self.assertEqual(v, comp+crc)
+        self.Tabdata.ambleflag = 1
+        v = self.Tabdata._build_flags()
+        self.assertEqual(v, comp+crc+amble)
+        self.Tabdata.crcflag = 0
+        v = self.Tabdata._build_flags()
+        self.assertEqual(v, comp+amble)
+        self.Tabdata.compressflag = 0
+        v = self.Tabdata._build_flags()
+        self.assertEqual(v, amble)
+        self.Tabdata.ambleflag = 0
+        v = self.Tabdata._build_flags()
+        self.assertEqual(v, 0)
+
+    def test_Lookup_Sync_Type_Text(self):
+        # test the sync type lookups from text
+        self.assertEqual(self.Tabdata.Lookup_Sync_Type_Text("INACTIVE"), 0)
+        self.assertEqual(self.Tabdata.Lookup_Sync_Type_Text("SUPER FRAME SYNC"), 1)
+        self.assertEqual(self.Tabdata.Lookup_Sync_Type_Text("FRAME SYNC"), 2)
+        self.assertEqual(self.Tabdata.Lookup_Sync_Type_Text("FIELD SYNC"), 4)
+        self.assertEqual(self.Tabdata.Lookup_Sync_Type_Text("SWATH SYNC"), 8)
+        self.assertEqual(self.Tabdata.Lookup_Sync_Type_Text("LINE SYNC"), 10)
+        self.assertEqual(self.Tabdata.Lookup_Sync_Type_Text("TILE SYNC"), 12)
+        self.assertRaises(ValueError,self.Tabdata.Lookup_Sync_Type_Text,"bad")
+
+    def test_serialise(self):
+        # create an instance of a hand crafted header and compare with algorithm
+        hdr = "04" + "02" + "03" + "20" + "00200001" + "000000E7" + "000000FA" \
+            + "00000000000D0010" + "00" + "0000000000" + "FFFF"
+        self.Tabdata.edition = 4
+        self.Tabdata.compressflag = 1
+        self.Tabdata.crcflag = 0
+        self.Tabdata.ambleflag = 0
+        self.Tabdata.segmentnum = 3
+        self.Tabdata.sourceaddress = 32   # platform data
+        self.Tabdata.datafileaddress = 2097153 # comp dynamics, platform 32
+        self.Tabdata.datafilesize = 231 # in bytes
+        self.Tabdata.datafilenum = 250
+        self.Tabdata.timetag = 851984
+        self.Tabdata.synctype = "INACTIVE"
+        self.Tabdata.reserved = "0000000000"
+        self.Tabdata.headcrc = "FFFF"
+        sh = binascii.unhexlify(hdr)
+        self.assertEqual(sh, self.Tabdata.serialise())
 
 class TestNPIF_DataContent(unittest.TestCase):
 
@@ -299,8 +355,6 @@ class TestNPIF_DataContent(unittest.TestCase):
         self.assertEqual(self.Tabdata.fieldreqs, None)
         self.assertEqual(self.Tabdata.data_flens, None)
         self.assertEqual(self.Tabdata.tcontents, None)
-        self.assertTrue(hasattr(self.Tabdata, 'errors'))
-
 
 class TestNPIF(unittest.TestCase):
 
@@ -2625,6 +2679,7 @@ class TestTablelist(unittest.TestCase):
         reffile1.close()
         result1 = difflib.unified_diff(refdata1,newdata1.splitlines(True))
         test1 = ''.join(result1)
+        #self.maxDiff = None
         self.assertEqual(test1, "")
 
     def testPrint_Basic_File_Data(self):

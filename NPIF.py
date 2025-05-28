@@ -4,30 +4,30 @@
 #
 # Author:      sfhelsdon-dstl
 # Originally Created:     05/07/2013
-# 
+#
 ############################################################################
 # Intellectual Property Rights
 #
 # The MIT License (MIT)
 #
 # Copyright (c) 2018 Dstl
-# 
-# Permission is hereby granted, free of charge, to any person obtaining a 
-# copy of this software and associated documentation files (the "Software"), 
+#
+# Permission is hereby granted, free of charge, to any person obtaining a
+# copy of this software and associated documentation files (the "Software"),
 # to deal in the Software without restriction, including without limitation
-# the rights to use, copy, modify, merge, publish, distribute, sublicense, 
-# and/or sell copies of the Software, and to permit persons to whom the 
+# the rights to use, copy, modify, merge, publish, distribute, sublicense,
+# and/or sell copies of the Software, and to permit persons to whom the
 # Software is furnished to do so, subject to the following conditions:
-# 
+#
 # The above copyright notice and this permission notice shall be included in
 # all copies or substantial portions of the Software.
-# 
-# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
-# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
-# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL 
-# THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER 
-# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING 
-# FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER 
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+# THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+# FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 # DEALINGS IN THE SOFTWARE.
 #
 #-------------------------------------------------------------------------
@@ -167,7 +167,7 @@ class NPIF_Error():
         E_SEGINDEX: "Checking for errors within any Segment Index tables ...",
         E_EVENTINDEX: "Checking for errors within any Event Index tables ...",
         E_SENSORNUM: "Checking for errors associated with sensor numbers ...",
-        E_TIMETAG: "Checking for existance of appropriate Format Time Tag Tables ...",
+        E_TIMETAG: "Checking for existence of appropriate Format Time Tag Tables ...",
         E_DYNAMICTABS: "Checking for errors with Dynamic Platform tables ...",
         E_SENATTTABS: "Checking for errors with Sensor Attitude tables ...",
         E_GIMBALTABS: "Checking for errors with Gimbal Attitude tables ...",
@@ -331,6 +331,63 @@ class NPIF_Header():
         self.tablename = None        # text
 
 
+    def serialise(self):
+        """
+        Serialise the header values to a byte array.
+        """
+        f = struct.pack('>4B3IQB5s2s',
+        self.edition,
+        self._build_flags(),
+        self.segmentnum,
+        self.sourceaddress,
+        self.datafileaddress,
+        self.datafilesize,
+        self.datafilenum,
+        self.timetag,
+        self.Lookup_Sync_Type_Text(self.synctype),
+        binascii.unhexlify(self.reserved),
+        binascii.unhexlify(self.headcrc)
+        )
+        return f
+
+    def Lookup_Sync_Type_Text(self, text):
+        """
+        Return an integer enumeration corresponding to the given String.
+
+        Given a string describing the Sync type from a packet header return an int
+        derived from the STANAG 7023 enumeration for Sync code.
+
+        """
+        if text == "INACTIVE":
+            return 0
+        elif text == "SUPER FRAME SYNC":
+            return 1
+        elif text == "FRAME SYNC":
+            return 2
+        elif text == "FIELD SYNC":
+            return 4
+        elif text == "SWATH SYNC":
+            return 8
+        elif text == "LINE SYNC":
+            return 10
+        elif text == "TILE SYNC":
+            return 12
+        else:
+            raise ValueError("Invalid text value for sync code lookup: " + text)
+
+    def _build_flags(self):
+        """
+        Get the header flags as an encoded value
+        """
+        intflags = 0
+        if self.ambleflag:
+            intflags = intflags | 8
+        if self.crcflag:
+            intflags = intflags | 4
+        if self.compressflag:
+            intflags = intflags | 2
+        return intflags
+
 class NPIF_DataContent():
     """
     Defines a set of info relevant to data in a packet.
@@ -365,7 +422,7 @@ class NPIF():
     HDR_LEN = 32            # Length of the Header. Does not include synchronisation field
     SYNC_LEN = 10           # sync filed length
     SYNC_FIELD = b"\x0D\x79\xAB\x21\x6F\x34\x1A\x72\xB9\x1C" # value of the sync field
-    TXT_UNKN_ENUM = "UNKNOWN EMUMERATION ####****"      # Text for an unknown enumeration value
+    TXT_UNKN_ENUM = "UNKNOWN ENUMERATION ####****"      # Text for an unknown enumeration value
     TXT_BAD_DTG = "INVALID DTG  ####****"               # Text for an invalid Date-Time value
     TXT_BAD_ASCII = "INVALID ASCII PRESENT ####****"    # text for a bad ASCII field (generally with non ASCII characters)
     TXT_NULL = "<NULL>"                                 # Text for a NULL value
@@ -979,7 +1036,7 @@ class NPIF():
 
     def Set_tcontents(self, new):
         """
-        Set tcontents to the given dict value in data model 
+        Set tcontents to the given dict value in data model
         Packet Data related info.
         """
         self.tdat.tcontents = new
@@ -2157,10 +2214,10 @@ class NPIF():
             return str(eint) + ", " + self.TXT_UNKN_ENUM
 
     # End of lookup functions
-    
+
     # Now follows a set of conversion functions, whch generally convert a raw value into a more readable form
     ##############################################################################
-    
+
     def Conv_DTG(self, dtg):
         """
         Given a buffer containing the 7023 encoded date-time info, return a
@@ -2462,7 +2519,7 @@ class NPIF():
             return invalue
 
     ###################################################################################
-    # Now follows a set of hardcoded data, much of which is extracted from the standard 
+    # Now follows a set of hardcoded data, much of which is extracted from the standard
     #
     # Data: the different data types used and the basic functions to be applied
     # to each of them
@@ -2701,7 +2758,7 @@ class NPIF():
         DT_Event_Index_DT: "Event Index",
         DT_User_Defined_DT: "User Defined",
         DT_Sensor_ID_DT: "Sensor Identification",
-        DT_PASSIVE_Sensor_Des_DT: "PASSIVE Sensor Description",
+        DT_PASSIVE_Sensor_Des_DT: "Passive Sensor Description",
         DT_Sensor_Calibration_DT: "Sensor Calibration",
         DT_Sync_Hier_and_ImBld_DT: "Sync Hierarchy and Image Build",
         DT_Sensor_Data_Timing_DT: "Sensor Data Timing",
@@ -2709,7 +2766,7 @@ class NPIF():
         DT_Sensor_Position_DT: "Sensor Position",
         DT_Min_Sensor_Att_DT: "Minimum Sensor Attitude",
         DT_Comp_Sensor_Att_DT: "Comprehensive Sensor Attitude",
-        DT_Gimbals_Position_DT: "Gimbals Position Data Table",
+        DT_Gimbals_Position_DT: "Gimbals Position",
         DT_Min_Gimbals_Att_DT: "Minimum Gimbals Attitude",
         DT_Comp_Gimbals_Att_DT: "Comprehensive Gimbals Attitude",
         DT_Sensor_Index_DT: "Sensor Index",
@@ -4641,7 +4698,7 @@ class Tabledata(NPIF):
                     z += 1
                     if self.TXT_NULL in str(self.tdat.tcontents[a]):
                         z -= 1
-                    # z records the number of non null in data8 to data20 (hopefully 0) 
+                    # z records the number of non null in data8 to data20 (hopefully 0)
                 # how many non-null in data6
                 if self.TXT_NULL in str(self.tdat.tcontents['Data 6']):
                     d6 = 0
@@ -5323,11 +5380,11 @@ class Tablelist (NPIF):
         self.frontbytelen = 0       # if there is some data ahead of 1st sync code its size in bytes will be here
         self.filename = ""          # filename of loaded file
         self.segmentlist = None     # list of unique segment numbers in file
-        self.dataseglist = None     # list of what data segments (i.e. excludes 0 as preamble) are 'ended' in the 
+        self.dataseglist = None     # list of what data segments (i.e. excludes 0 as preamble) are 'ended' in the
                                     # file (in file order as extracted from End_Segment_Marker tables)
         self.filesize = None        # size in bytes of the loaded file
         self.errors = NPIF_Error()  # NPIF_Error object
-        self.packetdict = None      # dict with keys of tablecode and values which are lists of those indices of self.packets 
+        self.packetdict = None      # dict with keys of tablecode and values which are lists of those indices of self.packets
                                     # with that tablecode
         self.postamblestyle = None  # integer to indicate postable style: 0= none, 1= end of each segment, 2= attached to preamble
         self.sensoridlist = []      # list of unique sensor IDs in file
@@ -5411,8 +5468,8 @@ class Tablelist (NPIF):
         # sort segment list, just in case of odd (i.e. broken) file
         seglist.sort()
         self.segmentlist = seglist
-        # 
-        # Create packetdict info. This is a dict with keys of tablecode (i.e. what data table is 
+        #
+        # Create packetdict info. This is a dict with keys of tablecode (i.e. what data table is
         # present) and values which are lists of those packets in the file with that tablecode.
         # e.g. packetdict[self.DT_End_Segment_Marker_DT] might return [45, 176, 2068] which are
         # the indices of self.packets which contain that table type.
@@ -5489,14 +5546,17 @@ class Tablelist (NPIF):
         If seg is given, only tables with segment number = seg will be counted.
         If nothing matches, an empty dict is returned.
         """
-        tdict = collections.defaultdict(lambda: 0)
+        # use OrderedDict so it's ordered by first instance of each table
+        tdict = collections.OrderedDict()
         if seg is None:
             for t in self.packets:
-                tdict[t.hdr.tablecode] += 1
+                if t.hdr.tablecode not in tdict : tdict[t.hdr.tablecode] = 1
+                else: tdict[t.hdr.tablecode] += 1
         else:
             for t in self.packets:
                 if t.hdr.segmentnum == seg:
-                    tdict[t.hdr.tablecode] += 1
+                    if t.hdr.tablecode not in tdict : tdict[t.hdr.tablecode] = 1
+                    else: tdict[t.hdr.tablecode] += 1
         return tdict
 
     def Print_Table_Summary(self, tdict=None, obuf=sys.stdout):
@@ -5508,7 +5568,7 @@ class Tablelist (NPIF):
         if tdict is None:
             tdict = self.Table_Summary()
         fstring = "{0:>10}, {1:<38}\n"
-        obuf.write(fstring.format("Occurances", "Table Name"))
+        obuf.write(fstring.format("Occurrences", "Table Name"))
         for keys in tdict:
             obuf.write(
                 fstring.format(tdict[keys], self.S7023_TABLE_NAMES[keys]))
@@ -5714,7 +5774,7 @@ class Tablelist (NPIF):
             # no end of record table at end
             self.errors.adderror(self.errors.E_ENDRECMARK,
                 self.errors.ELVL_LOW, "Last packet is, " +
-                d.hdr.tablename + "and not an End of Record Marker")
+                d.hdr.tablename + " and not an End of Record Marker")
         #
         rlist = self.packetdict[self.DT_End_Record_Marker_DT]
         if len(rlist) > 1:
@@ -5728,19 +5788,27 @@ class Tablelist (NPIF):
                 self.errors.ELVL_LOW, "No End of Record Tables in File.")
         #
         if d.hdr.tablecode == self.DT_End_Record_Marker_DT:
-            p = self.packets[-2]
-            if d.hdr.segmentnum != p.hdr.segmentnum + 1:
-                if d.hdr.segmentnum == 255 and p.hdr.segmentnum == 255:
-                    # ok - segment number 255 is a special case (max value possible)
-                    pass
-                else:
-                    # segment numbering not correct for end of record table
-                    self.errors.adderror(self.errors.E_ENDRECMARK,
-                        self.errors.ELVL_LOW,
-                        "End of Record table has segment number " +
-                        str(d.hdr.segmentnum) +
-                        ", and previous packet is numbered " +
-                        str(p.hdr.segmentnum))
+            # deal with case where only one table in a file
+            if len(self.packets) == 1:
+                # end record table is only table in file
+                self.errors.adderror(self.errors.E_ENDRECMARK,
+                self.errors.ELVL_WARN, "End of Record Table is only table " +
+                    "in File.")
+            else:
+                p = self.packets[-2]
+                if d.hdr.segmentnum != p.hdr.segmentnum + 1:
+                    if d.hdr.segmentnum == 255 and p.hdr.segmentnum == 255:
+                        # ok - segment number 255 is a special case
+                        # (max value possible)
+                        pass
+                    else:
+                        # segment numbering not correct for end of record table
+                        self.errors.adderror(self.errors.E_ENDRECMARK,
+                            self.errors.ELVL_LOW,
+                            "End of Record table has segment number " +
+                            str(d.hdr.segmentnum) +
+                            ", and previous packet is numbered " +
+                            str(p.hdr.segmentnum))
         # check the reported file size
         calcsize = 0
         if len(rlist) > 0:
@@ -6176,6 +6244,14 @@ class Tablelist (NPIF):
                 else:
                     # check if it is a duplicate of something in seg 0
                     same = 0
+                    # check if any segment 0 files present at all
+                    if len(seg0) == 0:
+                        self.errors.adderror(self.errors.E_POSTAMBLE,
+                            self.errors.ELVL_LOW, "Postamble for Segment " +
+                            str(skeys) + " is present and includes non-index " +
+                            "tables. But no Segment 0 " +
+                            "postamble present to compare with")
+                        continue
                     for c in seg0:
                         pp = self.packets[p]
                         cc = self.packets[c]
@@ -6445,6 +6521,7 @@ class Tablelist (NPIF):
                 self.errors.adderror(self.errors.E_SEGINDEX,
                     self.errors.ELVL_LOW, ptext + etxt)
             # find last header in seg
+            last = -1 # deals with segments with only postamble or EoS tables
             for p in reversed(self.packets):
                 # need to ignore postable and End of Segment tables in this calculation
                 if p.hdr.segmentnum == seg and p.hdr.ambleflag == 0:
@@ -6453,20 +6530,26 @@ class Tablelist (NPIF):
                         tt = p.hdr.timetag
                         plen = p.hdr.claimlen
                         break
-            endoff = self.packetstarts[last] - self.frontbytelen + plen
-            if endoff != val2:
-                # declared value does not match file content for end offset
-                etxt = ("Field 2, End of data segment value (" + str(val2)
-                    + ") does not match calculated value (" + str(endoff) +
-                    ")")
+            if last == -1:
+                # flag error
+                etxt = ("Segment contains only index or postamble tables")
                 self.errors.adderror(self.errors.E_SEGINDEX,
                     self.errors.ELVL_LOW, ptext + etxt)
-            if tt != val6:
-                # declared value does not match file content for end timetag
-                etxt = ("Field 6, End Header Time Tag (" + str(val6)
-                    + ") does not match calculated value (" + str(tt) + ")")
-                self.errors.adderror(self.errors.E_SEGINDEX,
-                    self.errors.ELVL_LOW, ptext + etxt)
+            else:
+                endoff = self.packetstarts[last] - self.frontbytelen + plen
+                if endoff != val2:
+                    # declared value does not match file content for end offset
+                    etxt = ("Field 2, End of data segment value (" + str(val2)
+                        + ") does not match calculated value (" + str(endoff) +
+                        ")")
+                    self.errors.adderror(self.errors.E_SEGINDEX,
+                        self.errors.ELVL_LOW, ptext + etxt)
+                if tt != val6:
+                    # declared value does not match file content for end timetag
+                    etxt = ("Field 6, End Header Time Tag (" + str(val6)
+                        + ") does not match calculated value (" + str(tt) + ")")
+                    self.errors.adderror(self.errors.E_SEGINDEX,
+                        self.errors.ELVL_LOW, ptext + etxt)
             # unsure how to calculate any other values for comparison
         return
 
@@ -6698,12 +6781,12 @@ class Tablelist (NPIF):
                 if qq.hdr.segmentnum == 0:
                     senlist0.remove(qq.hdr.Sensor_ID_Num)
         if len(senlist0):
-            etxt = ("Sensor IDs" + str(senlist0) + "do not have a Sensor " +
+            etxt = ("Sensor IDs " + str(senlist0) + " do not have a Sensor " +
                 "Identification table in the preamble")
             self.errors.adderror(self.errors.E_SENSORNUM,
                 self.errors.ELVL_WARN, etxt)
         if len(senlist):
-            etxt = ("Sensor IDs" + str(senlist0) + "do not have a Sensor " +
+            etxt = ("Sensor IDs " + str(senlist0) + " do not have a Sensor " +
                 "Identification table in the record")
             self.errors.adderror(self.errors.E_SENSORNUM,
                 self.errors.ELVL_WARN, etxt)

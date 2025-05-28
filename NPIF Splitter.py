@@ -1,12 +1,8 @@
 #-------------------------------------------------------------------------
-# Name:         NPIF Sleuth
-# Purpose:      print information about a 7023 file. Includes:
-#               - Summary of tables (txt file)
-#               - detail on tables, and table contents (csv file)
-#               - basic analysis results (txt file)
+# Name:         NPIF Splitter
+# Purpose:      split a 7023 file into multiple files (one per table)
 #
-# Author:      sfhelsdon-dstl
-# Originally Created:     02/07/2013
+# Based on NPIF Sleuth, by sfhelsdon-dstl
 #
 ############################################################################
 #
@@ -40,7 +36,7 @@ from NPIF import *
 from S7023_GUI import *
 
 
-def NPIF_Extract(fname):
+def NPIF_Split(fname):
     retstring = None
     # Create Tablelist Object
     a = Tablelist()
@@ -52,40 +48,17 @@ def NPIF_Extract(fname):
     #
     # get filename with no extension on the end
     noext = os.path.splitext(fname)[0]
-    # make names for output files
-    summaryout = noext + '_summary.txt'
-    tablesout = noext + '_tables.csv'
-    testsout = noext + '_tests.txt'
-    #
-    # open output files for writing
-    try:
-        sout = open(summaryout, 'w')
-    except IOError:
-        retstring = "Unable to Open output file:\n" + str(summaryout) + "\nCheck it is not open in another program and you can write to that location."
-        return retstring
-    try:
-        tabout = open(tablesout, 'w')
-    except IOError:
-        retstring = "Unable to Open output file:\n" + str(tablesout) + "\nCheck it is not open in another program and you can write to that location."
-        return retstring
-    try:
-        tstout = open(testsout, 'w')
-    except IOError:
-        retstring = "Unable to Open output file:\n" + str(testsout) + "\nCheck it is not open in another program and you can write to that location."
-        return retstring
     #
     # read in the file
     a.Open_7023_File(fname)
-    # add contents to 1st output file (summary)
-    a.Print_Basic_File_Data(obuf=sout)
-    sout.close()
-    # add contents to 2nd output file (csv detail)
-    a.Print_All_Tables(obuf=tabout, detail=True, strictcsv=True)
-    tabout.close()
-    # add contents to 3rd output file (simple analysis)
-    a.file_error_checks()
-    a.printallerrorssorted(obuf=tstout)
-    tstout.close()
+    tableIndex = 0
+    for p in a.packets:
+        tablefile = open(noext + "_table_" + str(tableIndex).zfill(7) + ".7023", 'wb')
+        tablefile.write(NPIF.SYNC_FIELD)
+        tablefile.write(p.hdr.serialise())
+        tablefile.write(p.tdat.dataraw)
+        tablefile.close()
+        tableIndex += 1
     #
     return retstring
 
@@ -97,8 +70,8 @@ def main():
     else:
         # Use GUI
         fname = Get7023_Filename()
-    # check this looks like a 7023 file
-    retval = NPIF_Extract(fname)
+    # split up file
+    retval = NPIF_Split(fname)
     if retval is not None:
         Do7023_ErrorBox(retval)
     # all done

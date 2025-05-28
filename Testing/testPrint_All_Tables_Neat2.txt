@@ -10,7 +10,7 @@ Count,Source,Table,SA,DFA,F1,F2,F3,Size,Segment,Number,Time Tag,Sync Type,Editio
 5,Platform,Sensor Grouping,32,4260027,0,0,0,6,2,238,305419896,INACTIVE,4
 6,User Defined,User Defined,63,187,0,0,0,15,2,238,305419896,INACTIVE,4
 7,Sensor Parametric,Comprehensive Sensor Attitude,80,48,0,0,0,72,2,238,305419896,INACTIVE,4
-8,Sensor Parametric,Gimbals Position Data Table,80,83,0,0,0,24,2,238,305419896,INACTIVE,4
+8,Sensor Parametric,Gimbals Position,80,83,0,0,0,24,2,238,305419896,INACTIVE,4
 9,Sensor Parametric,Comprehensive Gimbals Attitude,80,114,0,0,0,72,2,238,305419896,INACTIVE,4
 10,Sensor Parametric,Sensor Sample Coordinate Description,80,4112,0,0,0,19,2,238,305419896,INACTIVE,4
 11,Sensor Parametric,Sensor Sample Timing Description,80,4128,0,0,0,7,2,238,305419896,INACTIVE,4
@@ -46,7 +46,7 @@ Count,Source,Table,SA,DFA,F1,F2,F3,Size,Segment,Number,Time Tag,Sync Type,Editio
 41,Sensor Parametric,Sensor Position,64,16,0,0,1,24,0,1,0,INACTIVE,3
 42,Sensor Parametric,Minimum Sensor Attitude,64,32,0,0,1,24,0,2,0,INACTIVE,3
 43,Sensor Parametric,Sensor Operating Status,64,6,0,0,1,256,0,3,0,INACTIVE,3
-44,Sensor Parametric,PASSIVE Sensor Description,64,1,0,0,1,61,0,4,0,INACTIVE,3
+44,Sensor Parametric,Passive Sensor Description,64,1,0,0,1,61,0,4,0,INACTIVE,3
 45,Sensor Parametric,Sensor Identification,64,0,0,0,1,35,0,5,0,INACTIVE,3
 46,Sensor Parametric,Sensor Calibration,64,2,0,0,1,99,0,6,0,INACTIVE,3
 47,Sensor Parametric,JPEG Sensor Huffman,64,258,0,0,1,420,0,7,0,INACTIVE,3

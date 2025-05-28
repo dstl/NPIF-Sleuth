@@ -1,12 +1,10 @@
 #-------------------------------------------------------------------------
-# Name:         NPIF Sleuth
-# Purpose:      print information about a 7023 file. Includes:
-#               - Summary of tables (txt file)
-#               - detail on tables, and table contents (csv file)
-#               - basic analysis results (txt file)
+# Name:         GoldenOut
+# Purpose:      Regenerate outputs for the golden files
+#
 #
 # Author:      sfhelsdon-dstl
-# Originally Created:     02/07/2013
+# Originally Created:     27/05/2025
 #
 ############################################################################
 #
@@ -14,7 +12,7 @@
 #
 # The MIT License (MIT)
 #
-# Copyright (c) 2018 Dstl
+# Copyright (c) 2025 Dstl
 #
 # Permission is hereby granted, free of charge, to any person obtaining a
 # copy of this software and associated documentation files (the "Software"),
@@ -35,12 +33,19 @@
 # DEALINGS IN THE SOFTWARE.
 #
 #-------------------------------------------------------------------------
+import sys
+if '../' not in sys.path:
+    sys.path.append('../')
 
 from NPIF import *
-from S7023_GUI import *
 
+Golden_location = "D:\\Software_dev\\golden\\"
 
-def NPIF_Extract(fname):
+Golden_list = [ "64-sensors.7023", "frame-8.7023", "frame-10.7023",
+    "frame-24.7023", "line-8.7023", "line-12.7023", "pan-frame-16.7023",
+    "pushbroom-10.7023", "step-frame-8.7023"]
+
+def NPIF_Extract_G(fname):
     retstring = None
     # Create Tablelist Object
     a = Tablelist()
@@ -89,19 +94,13 @@ def NPIF_Extract(fname):
     #
     return retstring
 
-
 def main():
-    if len(sys.argv) > 1:
-        # Use specified file name if provided
-        fname = sys.argv[1]
-    else:
-        # Use GUI
-        fname = Get7023_Filename()
-    # check this looks like a 7023 file
-    retval = NPIF_Extract(fname)
-    if retval is not None:
-        Do7023_ErrorBox(retval)
-    # all done
+    for f in Golden_list:
+        infile = Golden_location + f
+        print(infile)
+        retval = NPIF_Extract_G(infile)
+        if retval is not None:
+            Do7023_ErrorBox(retval)
 
 if __name__ == '__main__':
     main()
