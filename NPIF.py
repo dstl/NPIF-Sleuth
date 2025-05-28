@@ -167,7 +167,7 @@ class NPIF_Error():
         E_SEGINDEX: "Checking for errors within any Segment Index tables ...",
         E_EVENTINDEX: "Checking for errors within any Event Index tables ...",
         E_SENSORNUM: "Checking for errors associated with sensor numbers ...",
-        E_TIMETAG: "Checking for existance of appropriate Format Time Tag Tables ...",
+        E_TIMETAG: "Checking for existence of appropriate Format Time Tag Tables ...",
         E_DYNAMICTABS: "Checking for errors with Dynamic Platform tables ...",
         E_SENATTTABS: "Checking for errors with Sensor Attitude tables ...",
         E_GIMBALTABS: "Checking for errors with Gimbal Attitude tables ...",
@@ -5773,7 +5773,7 @@ class Tablelist (NPIF):
             # no end of record table at end
             self.errors.adderror(self.errors.E_ENDRECMARK,
                 self.errors.ELVL_LOW, "Last packet is, " +
-                d.hdr.tablename + "and not an End of Record Marker")
+                d.hdr.tablename + " and not an End of Record Marker")
         #
         rlist = self.packetdict[self.DT_End_Record_Marker_DT]
         if len(rlist) > 1:
@@ -6757,12 +6757,12 @@ class Tablelist (NPIF):
                 if qq.hdr.segmentnum == 0:
                     senlist0.remove(qq.hdr.Sensor_ID_Num)
         if len(senlist0):
-            etxt = ("Sensor IDs" + str(senlist0) + "do not have a Sensor " +
+            etxt = ("Sensor IDs " + str(senlist0) + " do not have a Sensor " +
                 "Identification table in the preamble")
             self.errors.adderror(self.errors.E_SENSORNUM,
                 self.errors.ELVL_WARN, etxt)
         if len(senlist):
-            etxt = ("Sensor IDs" + str(senlist0) + "do not have a Sensor " +
+            etxt = ("Sensor IDs " + str(senlist0) + " do not have a Sensor " +
                 "Identification table in the record")
             self.errors.adderror(self.errors.E_SENSORNUM,
                 self.errors.ELVL_WARN, etxt)
