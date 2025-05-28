@@ -1,6 +1,6 @@
 # NPIF-Sleuth
 
-Version 3.2
+Version 3.3
 This folder contains a set of python code to test and explore NPIF (STANAG 7023 files)
 
 This code is intended to help a Subject Matter Expert assess the content of an NPIF file.
