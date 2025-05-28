@@ -6244,6 +6244,14 @@ class Tablelist (NPIF):
                 else:
                     # check if it is a duplicate of something in seg 0
                     same = 0
+                    # check if any segment 0 files present at all
+                    if len(seg0) == 0:
+                        self.errors.adderror(self.errors.E_POSTAMBLE,
+                            self.errors.ELVL_LOW, "Postamble for Segment " +
+                            str(skeys) + " is present and includes non-index " +
+                            "tables. But no Segment 0 " +
+                            "postamble present to compare with")
+                        continue
                     for c in seg0:
                         pp = self.packets[p]
                         cc = self.packets[c]
