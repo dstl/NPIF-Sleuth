@@ -6521,6 +6521,7 @@ class Tablelist (NPIF):
                 self.errors.adderror(self.errors.E_SEGINDEX,
                     self.errors.ELVL_LOW, ptext + etxt)
             # find last header in seg
+            last = -1 # deals with segments with only postamble or EoS tables
             for p in reversed(self.packets):
                 # need to ignore postable and End of Segment tables in this calculation
                 if p.hdr.segmentnum == seg and p.hdr.ambleflag == 0:
@@ -6529,20 +6530,26 @@ class Tablelist (NPIF):
                         tt = p.hdr.timetag
                         plen = p.hdr.claimlen
                         break
-            endoff = self.packetstarts[last] - self.frontbytelen + plen
-            if endoff != val2:
-                # declared value does not match file content for end offset
-                etxt = ("Field 2, End of data segment value (" + str(val2)
-                    + ") does not match calculated value (" + str(endoff) +
-                    ")")
+            if last == -1:
+                # flag error
+                etxt = ("Segment contains only index or postamble tables")
                 self.errors.adderror(self.errors.E_SEGINDEX,
                     self.errors.ELVL_LOW, ptext + etxt)
-            if tt != val6:
-                # declared value does not match file content for end timetag
-                etxt = ("Field 6, End Header Time Tag (" + str(val6)
-                    + ") does not match calculated value (" + str(tt) + ")")
-                self.errors.adderror(self.errors.E_SEGINDEX,
-                    self.errors.ELVL_LOW, ptext + etxt)
+            else:
+                endoff = self.packetstarts[last] - self.frontbytelen + plen
+                if endoff != val2:
+                    # declared value does not match file content for end offset
+                    etxt = ("Field 2, End of data segment value (" + str(val2)
+                        + ") does not match calculated value (" + str(endoff) +
+                        ")")
+                    self.errors.adderror(self.errors.E_SEGINDEX,
+                        self.errors.ELVL_LOW, ptext + etxt)
+                if tt != val6:
+                    # declared value does not match file content for end timetag
+                    etxt = ("Field 6, End Header Time Tag (" + str(val6)
+                        + ") does not match calculated value (" + str(tt) + ")")
+                    self.errors.adderror(self.errors.E_SEGINDEX,
+                        self.errors.ELVL_LOW, ptext + etxt)
             # unsure how to calculate any other values for comparison
         return
 
