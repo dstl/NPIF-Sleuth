@@ -64,8 +64,13 @@ def NPIF_Split(fname):
 
 
 def main():
-    fname = Get7023_Filename()
-    # check this looks like a 7023 file
+    if len(sys.argv) > 1:
+        # Use specified file name if provided
+        fname = sys.argv[1]
+    else:
+        # Use GUI
+        fname = Get7023_Filename()
+    # split up file
     retval = NPIF_Split(fname)
     if retval is not None:
         Do7023_ErrorBox(retval)
